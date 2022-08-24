@@ -14,7 +14,6 @@ const InnerNav = () => {
   const style = {
     color: "#333",
     textDecoration: "none",
-    fontWeight: "light",
   };
 
   const [dropdownPune, setDropdownPune] = useState(false);
