@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import InnerNav from "./Components/InnerNavbar/InnerNav";
 
@@ -20,7 +19,7 @@ function App() {
         </a>
 
       </header> */}
-      <InnerNav />
+      {/* <InnerNav /> */}
     </div>
   );
 }
