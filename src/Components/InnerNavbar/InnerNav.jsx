@@ -24,7 +24,7 @@ const InnerNav = () => {
       <ul className="nav-items">
         {innerNavItems.map((items) => {
           // ----------------------Pune Navitem with dropdown------------------
-          if (items.title === "Pune") {
+          if (items.title === "Hotels") {
             return (
               <li
                 key={items.id}
