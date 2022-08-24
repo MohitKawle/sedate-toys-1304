@@ -14,12 +14,10 @@ const InnerNav = () => {
   const style = {
     color: "#333",
     textDecoration: "none",
-    fontWeight: "medium",
+    fontWeight: "light",
   };
 
   const [dropdownPune, setDropdownPune] = useState(false);
-  const [dropdownHotel, setDropdownHotel] = useState(false);
-  const [dropdownPlacesToVisit, setDropdownPlacesToVisit] = useState(false);
 
   return (
     <>
@@ -33,7 +31,6 @@ const InnerNav = () => {
                 className={items.cName}
                 onMouseEnter={() => {
                   setDropdownPune(true);
-                  setDropdownHotel(false);
                 }}
                 onMouseLeave={() => {
                   setDropdownPune(false);
@@ -46,57 +43,6 @@ const InnerNav = () => {
                   {items.title}
                 </NavLink>
                 {dropdownPune && <Dropdown />}
-              </li>
-            );
-          }
-
-          // ----------------------Hotels Navitem with dropdown------------------
-          if (items.title === "Hotels") {
-            return (
-              <li
-                key={items.id}
-                className={items.cName}
-                onMouseEnter={() => {
-                  setDropdownHotel(true);
-                  setDropdownPune(false);
-                }}
-                onMouseLeave={() => {
-                  setDropdownHotel(false);
-                }}
-              >
-                <NavLink
-                  style={({ isActive }) => (isActive ? activeStyle : style)}
-                  to={items.path}
-                >
-                  {items.title}
-                </NavLink>
-                {dropdownHotel && <Dropdown />}
-              </li>
-            );
-          }
-
-          // ----------------------Places to Visit Navitem with dropdown------------------
-          if (items.title === "Places to visit") {
-            return (
-              <li
-                key={items.id}
-                className={items.cName}
-                onMouseEnter={() => {
-                  setDropdownPlacesToVisit(true);
-                  setDropdownHotel(false);
-                  setDropdownPune(false);
-                }}
-                onMouseLeave={() => {
-                  setDropdownHotel(false);
-                }}
-              >
-                <NavLink
-                  style={({ isActive }) => (isActive ? activeStyle : style)}
-                  to={items.path}
-                >
-                  {items.title}
-                </NavLink>
-                {dropdownPlacesToVisit && <Dropdown />}
               </li>
             );
           }

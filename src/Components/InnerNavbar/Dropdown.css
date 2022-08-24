@@ -4,6 +4,16 @@
 }
 
 
+.submenu-item{
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    text-decoration: none;
+    padding: 5.5rem;
+    font-size: 14px;
+}
+
+
 /* ------------------Pune Tourism------------------------- */
 .puneTourism-submenu{
     width: 10rem;
@@ -27,69 +37,4 @@
 
 .puneTourism-submenu.clicked{
     display: none;
-}
-
-/* ------------------Hotel------------------------- */
-.hotel-submenu{
-    width: 10rem;
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    list-style: none;
-    text-align: start;
-    padding: 0.25rem 1rem;
-    /* border: 2px solid red; */
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-/* .hotel-submenu li{
-    cursor: pointer;
-} */
-
-.hotel-submenu li a:hover{
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.hotel.clicked{
-    display: none;
-}
-
-/* ------------------Places to Visit------------------------- */
-
-.placestovisit-submenu{
-    width: 10rem;
-    position: absolute;
-    top: 100%;
-    left: 15%;
-    list-style: none;
-    text-align: start;
-    padding: 0.25rem 1rem;
-    /* border: 2px solid red; */
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-/* .hotel-submenu li{
-    cursor: pointer;
-} */
-
-.placestovisit-submenu li a:hover{
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.placestovisit.clicked{
-    display: none;
-}
-
-
-
-
-.submenu-item{
-    display: block;
-    width: 100%;
-    /* height: 100%; */
-    text-decoration: none;
-    padding: 5.5rem;
-    font-size: 14px;
 }
