@@ -1,3 +1,8 @@
+*{
+    font-family: "Trip Sans VF","Trip Sans",Arial,sans-serif;
+    color: #333;
+}
+
 .nav-items{
     display: flex;
     list-style: none;
@@ -5,11 +10,13 @@
     width: 100vw;
     justify-content: flex-start;
     margin-right: 1rem;
+    border: 1px solid #ececec;
+    padding: 0.5rem 5rem;
 }
 
 .nav-item{
     text-decoration: none;
-    color: black;
+    color: #333;
     font-size: 14px;
     margin-right: 0.25rem;
     padding: 3px 6px;
