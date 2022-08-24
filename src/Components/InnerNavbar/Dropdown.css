@@ -1,0 +1,40 @@
+*{
+    font-family: "Trip Sans VF","Trip Sans",Arial,sans-serif;
+    color: #333;
+}
+
+
+.submenu-item{
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    text-decoration: none;
+    padding: 5.5rem;
+    font-size: 14px;
+}
+
+
+/* ------------------Pune Tourism------------------------- */
+.puneTourism-submenu{
+    width: 10rem;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    text-align: start;
+    padding: 0.25rem 1rem;
+    /* border: 2px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* .puneTourism-submenu li{
+    cursor: pointer;
+} */
+
+.puneTourism-submenu li a:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.puneTourism-submenu.clicked{
+    display: none;
+}

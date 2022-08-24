@@ -1,12 +1,11 @@
-
-import './App.css';
-import { Hotels } from './Components/Hotels';
-
+import "./App.css";
+import InnerNav from "./Components/InnerNavbar/InnerNav";
 function App() {
   return (
     <div className="App">
-    <Hotels/>
+      <InnerNav />
     </div>
+
   );
 }
 
