@@ -1,5 +1,7 @@
 import "./App.css";
 import InnerNav from "./Components/InnerNavbar/InnerNav";
+import Homepage from "./Pages/Homepage";
+import MainRoutes from "./Pages/MainRoutes";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
 
       </header> */}
       <InnerNav />
+      <MainRoutes/>
     </div>
 
   );
