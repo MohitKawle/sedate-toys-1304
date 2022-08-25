@@ -52,6 +52,7 @@ const Hotels = () => {
                                         </div>
                                         <div className={styles.bestOptions}></div>
                                         <div className={styles.description}>
+                                            <p className={styles.aboutHead}>About</p>
                                             <p>{hotel.about}</p>
                                         </div>
                                     </div>
