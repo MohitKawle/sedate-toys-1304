@@ -3,6 +3,7 @@ import styles from './Things.module.css';
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Slides from './Slides';
 import { Heading, Text } from '@chakra-ui/react';
+import Slide from './Slide';
 
 
 const Things = () => {
@@ -32,6 +33,7 @@ const Things = () => {
                  <div>
                   <Heading>Ways to tour Pune</Heading>
                   <Text> Book these experiences for a close-up look at Pune.</Text>
+                  <Slide />
                  </div>
     </div>
   )

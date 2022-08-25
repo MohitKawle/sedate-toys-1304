@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <InnerNav />
       <Things />
-     <Slide />
+     
       
     </div>
 
