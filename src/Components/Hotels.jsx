@@ -14,7 +14,7 @@ const Hotels = () => {
         dispatch(getHotelList);
     }, [dispatch])
 
-    console.log(list);
+
 
     return (
         <div className={styles.container}>
