@@ -3,7 +3,7 @@ import InnerNav from "./Components/InnerNavbar/InnerNav";
 function App() {
   return (
     <div className="App">
-      <InnerNav />
+      <InnerNav />    
     </div>
 
   );

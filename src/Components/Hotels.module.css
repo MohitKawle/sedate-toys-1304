@@ -16,12 +16,14 @@
      margin-top: 20px;
     font-weight: bolder;
     font-size:xxx-large;
+    color: white;
 }
 
 .subheading{
     font-weight: 600;
     font-size: 18px;
     margin-top: 10px;
+    color: white;
 }
 
 .calenderDiv{
@@ -161,7 +163,7 @@
     color:#774ab1 ;
 }
 .suggestion{
-    /* border: 1px solid black; */
+    border-right: 1px solid rgb(221, 217, 217);
     width: 35%;
     height: 100%;
     padding:10px;
@@ -190,6 +192,7 @@
     font-size: 28px;
     font-weight: 600;
     margin-top: 5%;
+   
 }
 
 .description{
@@ -205,5 +208,12 @@
 .bestOptions{
     width: 25%;
     height: 100%;
-    /* border: 1px solid black; */
+    border-right: 1px solid rgb(221, 217, 217);
+}
+.aboutHead{
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #774ab1;
+
 }
