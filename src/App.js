@@ -1,11 +1,13 @@
 
-import Things from './Components/Thingd_to_do/Things';
-
+import "./App.css";
+import InnerNav from "./Components/InnerNavbar/InnerNav";
 function App() {
   return (
     <div className="App">
-      <Things />
+      <InnerNav />
+
     </div>
+
   );
 }
 
