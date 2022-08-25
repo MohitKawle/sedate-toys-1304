@@ -1,0 +1,31 @@
+*{
+    font-family: "Trip Sans VF","Trip Sans",Arial,sans-serif;
+    color: #333;
+}
+
+.nav-items{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    width: 100vw;
+    justify-content: flex-start;
+    margin-right: 1rem;
+    border: 1px solid #ececec;
+    padding: 0.5rem 5rem;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    margin-right: 0.75rem;
+    padding: 3px 6px;
+    width: auto;
+    height: 3vh;
+    /* border: 1px solid red; */
+}
+
+.nav-item:hover{
+    /* border-bottom: 3px solid black; */
+    cursor: pointer;
+}

@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 
+import "./App.css";
+import InnerNav from "./Components/InnerNavbar/InnerNav";
 function App() {
   return (
     <div className="App">
 
+      <InnerNav />
+
+
     </div>
+
   );
 }
 
