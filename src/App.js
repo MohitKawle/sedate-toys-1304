@@ -1,5 +1,5 @@
 
-import Things from './Components/Things';
+import Things from './Components/Thingd_to_do/Things';
 
 function App() {
   return (
