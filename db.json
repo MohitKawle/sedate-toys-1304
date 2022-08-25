@@ -77,7 +77,66 @@
    "restaurants":[
      {
       "id":1,
-      "name":"MoMo Cafe"
+      "name":"Paasha",
+      "rating":4,
+      "type":"Indian, Vegetarian, Friendly Vegan",
+      "comment":"Loved the food & Service,Dinner at JW Marriott Pasha",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-f/09/42/95/53/paasha.jpg"
+     },
+     {
+      "id": 2,
+      "name":"Alto Vino",
+      "rating":5,
+      "type":"Wine Bar, Italian",
+      "comment":"I cannot fault Alto Vino and the staff. Bhoomi and her colleague Veena were very attentive throughout.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/0a/4d/53/58/alto-vino.jpg"
+     }, {
+      "id": 3,
+      "name":"Spice Kitchen",
+      "rating":4,
+      "type":"Indian, Asian",
+      "comment":"Food was very delicious and special thanks to Dinesh for making our day special . Nd team of spice was very polite.nd very helpful in term of service.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/0c/71/70/89/spice-kitchen.jpg" 
+    },
+     {
+      "id": 4,
+      "name":"Ukiyo",
+      "rating":5,
+      "type":"Japanese,Sushi",
+      "comment":"The staff is super courteous and make sure that you have a great time there. The food was exquisite. The Salmon Avocado roll was to die for.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/ac/0f/52/ukiyo.jpg"
+     },
+     {
+      "id": 5,
+      "name":"Aasmana",
+      "rating":5,
+      "type":"Indian, Bar",
+      "comment":"If you are looking for the best North Indian / Mughlai : Awadhi food in Pune, Ritz is the place. Their flavours are unmatched.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/ac/0c/1b/aasmana.jpg"
+     },
+     {
+      "id": 6,
+      "name":"Three Kitchens Restaurant and Bar",
+      "rating":4,
+      "type":"Indian,European",
+      "comment":"As the name suggests, Three Kitchens serves multi cuisine - Asian, Indian and Continental fare. The ambience is brilliant and the food is really tasty.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/ac/0f/20/western-grills.jpg"
+     },
+     {
+      "id": 7,
+      "name":"Masaic",
+      "rating":4,
+      "type":"Asian,Indian",
+      "comment":"Very good experience.. Muskan was very polite and taking care if each guest. Good ambience as well Such a good experience.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/17/61/16/40/buffet.jpg"
+     },
+     {
+      "id": 8,
+      "name":"The Market",
+      "rating":4,
+      "type":"Indian, International",
+      "comment":"Their Japanese and Chinese food menu to be specific is amazing, I tried out a bunch of different dimsums and sushis and I enjoyed them all!",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/55/33/56/the-market.jpg"
      }
    ]
 }
