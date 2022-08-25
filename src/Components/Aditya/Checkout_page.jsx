@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Text,Link, Input, InputGroup, InputLeftAddon, Checkbox, Stack } from '@chakra-ui/react'
+import { Box, Image, Text,Link, Input, InputGroup, InputLeftAddon, Checkbox, Stack, RadioGroup, Radio, Divider, Button } from '@chakra-ui/react'
 import { ChevronLeftIcon } from '@chakra-ui/icons'
 
 const Checkout_page = () => {
@@ -101,7 +101,7 @@ const Checkout_page = () => {
 
 {/* Contact Details started................... */}
         <Box width={"555px"} 
-        border={"1px solid red"}
+        // border={"1px solid red"}
         >
               <Text fontSize={"24px"}
               fontWeight={"700"}
@@ -193,16 +193,78 @@ const Checkout_page = () => {
           marginTop={"10px"}
           >The provider offers pickup.</Text>
         </Box>
+        <RadioGroup defaultValue='1'>
+          <Stack marginTop={"15px"}>
+            <Radio colorScheme={"blackAlpha"} value='1'><Text fontSize={"12px"}>Enter your pickup location</Text></Radio>
+            <Input type={"text"} width={"508px"} marginTop={"10px"} marginBottom={"10px"}/>
+            <Radio colorScheme={"blackAlpha"} value='2'><Text fontSize={"12px"}>I will select my pickup location later</Text></Radio>
+          </Stack>
+        </RadioGroup>
+ {/* Promo Code started */}
+        <Box>
+        <Text fontSize={"24px"}
+              fontWeight={"700"}
+            lineHeight="120%"
+            marginTop={"30px"}
+              >Promo Code</Text>
+        <Divider marginTop={"10px"}/>
+        <Text marginTop={"10px"}>Enter Promo Code</Text>
+        </Box>
+        <Box textAlign={"center"}>
+        <Button 
+        marginTop={"40px"}
+        padding={"10px 150px 10px 150px"}
+        backgroundColor={"black"}
+        color={"white"}
+        borderRadius={"30px"}
+        _hover={{textDecoration:"none"}}
+        >Next</Button>
+        </Box>
+   
         </Box>
           
 {/* Review Order Details started */}
         <Box 
-        width={"340px"} 
+        width={"360px"} 
         border={"1px solid red"}
+        marginTop={"25px"}
         >
-          From Mumbai visit Trimbakeshwar, 
+         <Box
+         boxShadow= "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
+         borderRadius={"5px"}
+         >
+          <Box>
+          <Text fontSize={"24px"}
+              fontWeight={"700"}
+              paddingTop={"20px"}
+              marginLeft={"15px"}
+              >Review Order Details</Text>
+          </Box>
+         </Box>
+
+ {/* Book with confidence started */}
+         <Box
+         boxShadow= "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
+         borderRadius={"5px"}
+         marginTop={"30px"}
+         >
+          <Box>
+          <Text fontSize={"24px"}
+              fontWeight={"700"}
+              paddingTop={"20px"}
+              marginLeft={"15px"}
+              >Book with confidence</Text>
+          </Box>
+         </Box>
         </Box>
       </Box>
+     <Box textAlign={"center"}>
+     <Text marginTop={"30px"} 
+      marginBottom={"30px"}
+      fontSize={"12px"}
+      color={"grey"}
+      >© 2022 TripAdvisor LLC All rights reserved. Tripadvisor <Link color={"#188ead"}>Terms of Use</Link> and <Link color={"#188ead"} >Privacy Policy</Link>.</Text>
+     </Box>
     </Box>
   )
 
