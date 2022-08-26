@@ -1,0 +1,62 @@
+.hdiv1{
+    background-image: url("https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp");
+    width: 70%;
+    height:350px;
+    border: 1px solid red;
+    margin: auto;
+    margin-top: 20px;
+}
+.search{
+    width: 70%;
+    height: 50px;
+    margin: auto;
+    border: 1px solid red;
+    margin-top: 150px;
+    background-color: white;
+    border-radius: 50px;
+}
+.search :hover{
+    cursor: "move";
+}
+.search_logo{
+    
+    height: 28px;
+    margin-left: 12px;
+    margin-top: 9px;
+}
+.search_input{
+    font-size: 18px;
+    color: rgb(88, 88, 88);
+    margin-top: 12px;
+    margin-left: 14px;
+    
+}
+.div_flex{
+    display: flex;
+}
+/* ways to nagput */
+.way_nagpur{
+  border: 1px solid red;
+    width: 70%;
+    margin: auto;
+    margin-top: 35px;
+}
+.ways_to1{
+    width: auto;
+    width: 30%;
+    border: 1px solid green;
+    
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+.book_this{
+    text-align: left;
+    margin-top: 6px;
+    font-size: 14px;
+}
+.carousal1{
+    margin-left: 0;
+    color: blue; font-size: 30px;
+    
+}
