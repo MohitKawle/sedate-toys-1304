@@ -75,6 +75,7 @@ const TopAttraction = () => {
 		{
 			id: 6,
 			name: "The Saturday Night Market",
+			review:"Night markets are color full and joy to go buy products ",
 			category: "Flea & Street Markets",
 			list: [
 				"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/b5/b4/36/girls-girls-girls-saturday.jpg?w=500&h=400&s=1",
@@ -128,6 +129,7 @@ const TopAttraction = () => {
 		{
 			id: 10,
 			name: "Church of Our Lady of the Immaculate Conception",
+			review:"Church is a place to pray jesus and piece of mind for any tensions like sorry for the our wrongs in daily life",
 			category: "Architectural Buildings",
 			list: [
 				"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/4d/d6/8d/our-lady-of-the-immaculate.jpg?w=500&h=400&s=1",

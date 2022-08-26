@@ -7,6 +7,7 @@ import Slide from './Slide';
 import { useDispatch, useSelector } from 'react-redux';
 import { placesdata } from '../../Redux/AppReducer/action';
 import TopAttraction from './Top_Attraction';
+import Review from './Review';
 
 
 const Things = () => {
@@ -69,6 +70,27 @@ console.log(places)
               <TopAttraction />
               <br />
               <br />
+              <div className={styles.download}>
+                <div className={styles.b1}>
+                    <Heading mt={50}>The both of you could use a trip.</Heading>
+                    <Text>Plan the holiday you deserve with our app.</Text>
+                </div>
+                <div className={styles.b2}>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/43/a7/ce/caption.jpg?w=300&h=-1&s=1" alt="" />
+                </div>
+              </div>
+              <br />
+              <br />
+              <Heading margin="auto" >Cultural Tours</Heading>
+              <Slides />
+              <br />
+              <hr />
+              <br />
+              <Heading margin="auto">City Tours</Heading>
+              <Slide />
+              <hr />
+              <br />
+              <Review />
     </div>
   )
 }
