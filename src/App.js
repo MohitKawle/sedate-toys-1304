@@ -11,8 +11,8 @@ function App() {
 
     {/* <InnerNav/> */}
     <MainRoutes />
-    {/* <Things /> */}
-   
+    {/* <Things />
+    */}
     </div>
 
   );

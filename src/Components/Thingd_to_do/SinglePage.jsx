@@ -35,8 +35,16 @@ const SinglePage = () => {
     }
   },[id,placesData]);
   console.log(placesData);
-   
+
+//    let temp=[];
     const Data = items.items;
+    // if(Data.length>0 ){
+    //     for(let i=0;i<Data.length;i++){
+    //         if(id==Data[i].id){
+    //             temp.push(Data[i])
+    //         }
+    //     }
+    // }
     console.log(Data);
 
     const AddToBag = () =>{
