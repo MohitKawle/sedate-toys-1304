@@ -4,6 +4,7 @@ const initialState={
    
     hotelList:[],
     restaurantList:[],
+    places:[],
     isLoading:false,
     isError:false
 }
@@ -21,6 +22,19 @@ const reducer=(state=initialState,{type , payload})=>{
             return{ ...state , isLoading:false, hotelList:payload , isError:false}
         }
         case types.HOTEL_LIST_FALIURE:{
+
+            return{ ...state , isLoading:false , isError:true }
+        }
+
+        case types.PLACES_REQUEST:{
+
+            return{ ...state , isLoading:true , isError:false}
+        }
+        case types.PLACES_SUCCESS:{
+
+            return{ ...state , isLoading:false, places:payload , isError:false}
+        }
+        case types.PLACES_FAILURE:{
 
             return{ ...state , isLoading:false , isError:true }
         }

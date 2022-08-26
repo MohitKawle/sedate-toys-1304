@@ -24,6 +24,7 @@
     "redux-thunk": "^2.4.1",
     "redux-thunks": "^1.0.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.5",
     "thunks": "^4.9.6",
     "web-vitals": "^2.1.4"
   },
