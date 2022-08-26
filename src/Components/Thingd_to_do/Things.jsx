@@ -2,11 +2,14 @@ import React,{useEffect} from 'react'
 import styles from './Things.module.css';
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Slides from './Slides';
-import { Heading, Text } from '@chakra-ui/react';
+import { Heading,  Text } from '@chakra-ui/react';
 import Slide from './Slide';
 import { useDispatch, useSelector } from 'react-redux';
 import { placesdata } from '../../Redux/AppReducer/action';
 import TopAttraction from './Top_Attraction';
+import Review from './Review';
+import {Link} from "react-router-dom";
+import PlacesCard from './PlacesCard';
 
 
 const Things = () => {
@@ -52,12 +55,10 @@ console.log(places)
                   <Heading>Recommended For You</Heading>
                   <Text> Tours and activities tailored to your interests.</Text>
                   <div className={styles.place} >
-                  {places?.length>0 && places.map((el)=>(
-                    <div key={el.id}>
-                    <img height="200px" src={el.imageUrl} alt="" />
-                              <p style={{ fontSize: "20px" }}>{el.title}</p>
-                              <p style={{fontSize:"14px"}}>{el.price}</p>
-                    </div>
+                  {places?.length>0 && places?.map((el)=>(
+                    <Link to={`/places/${el.id}`}><PlacesCard key={el.id} item={el}/>
+                    
+                    </Link>
                   )
                  
                   )}
@@ -69,6 +70,27 @@ console.log(places)
               <TopAttraction />
               <br />
               <br />
+              <div className={styles.download}>
+                <div className={styles.b1}>
+                    <Heading mt={50}>The both of you could use a trip.</Heading>
+                    <Text>Plan the holiday you deserve with our app.</Text>
+                </div>
+                <div className={styles.b2}>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/43/a7/ce/caption.jpg?w=300&h=-1&s=1" alt="" />
+                </div>
+              </div>
+              <br />
+              <br />
+              <Heading margin="auto" >Cultural Tours</Heading>
+              <Slides />
+              <br />
+              <hr />
+              <br />
+              <Heading margin="auto">City Tours</Heading>
+              <Slide />
+              <hr />
+              <br />
+              <Review />
     </div>
   )
 }
