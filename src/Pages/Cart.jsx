@@ -193,7 +193,14 @@ const Cart = () => {
               <p style={{ fontSize: "12px", color: "gray" }}>
                 No additional taxes and fees
               </p>
-              <Button p={7} className="checkout-btn">
+              <Button
+                p={7}
+                colorScheme="#f2b203"
+                borderRadius="25px"
+                marginTop="5%"
+                color="black"
+                className="checkout-btn"
+              >
                 Checkout
               </Button>
               <br />
