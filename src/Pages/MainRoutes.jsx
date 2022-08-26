@@ -8,10 +8,15 @@ const MainRoutes = () => {
   return (<>
     <Routes>
     <Route path="/" element={<Homepage />} />
+
+    
+
+
    <Route path="/hotels" element={<Hotels/>}/>
    <Route path="/places/:id" element={<SinglePage />}/>
    <Route path='/Things' element ={<Things />} />
  
+
     </Routes>
    
     </>)
