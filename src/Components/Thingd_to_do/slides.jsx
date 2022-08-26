@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Heading, Img } from "@chakra-ui/react";
-import styles from "./Slides.module.css";
 
 const Slides =()=>{
     var settings = {
