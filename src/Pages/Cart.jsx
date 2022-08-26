@@ -99,7 +99,7 @@ const Cart = () => {
             </Box>
             <br />
             {/* ---------------------------------Dummy item2----------------------------------------- */}
-            {/* <Box>
+            <Box>
               <Flex>
                 <Box>
                   <Flex direction="column" p={2}>
@@ -161,7 +161,7 @@ const Cart = () => {
                 </Box>
               </Flex>
               <Divider w="100%" color="gray" />
-            </Box> */}
+            </Box>
             {/* })} */}
             {/* -----------------------Right side for total amount------------------------ */}
             <Box p={8} shadow="md" borderWidth="1px" className="review">
