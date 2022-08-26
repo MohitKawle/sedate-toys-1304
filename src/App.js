@@ -1,28 +1,25 @@
-import "./App.css";
+
 import InnerNav from "./Components/InnerNavbar/InnerNav";
+
 import Homepage from "./Pages/Homepage";
 import MainRoutes from "./Pages/MainRoutes";
 
+import Slide from "./Components/Thingd_to_do/Slide";
+
+
+import Things from "./Components/Thingd_to_do/Things";
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
 
-      </header> */}
+
+      
       <InnerNav />
       <MainRoutes/>
+
+    
+    <Things />
+
     </div>
 
   );

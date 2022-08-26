@@ -1,0 +1,143 @@
+{
+   "hotels":[
+    {
+      "id":1,
+      "name":"Lemon Tree Premier, City Center, Pune",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/19/a8/77/27/photo0jpg.jpg",
+      "price":4902,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"Lemon Tree Premier, City Center, Pune is situated in the heart of the city, which is a hub for business, education and entertainment. Conveniently located on Connaught Road, it is just 5 minutes away from the railway station."
+    },
+    {
+      "id":2,
+      "name":" The Corinthians Resort & Club",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/03/c5/40/94/the-corinthians-boutique.jpg",
+      "price":5442,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"The Corinthians is a five-star hotel located in the verdant hilltop of South Pune. A stay at The Corinthians Resort & Club promises to be a visual and sensual delight, in true sense."
+    },
+    {
+      "id":3,
+      "name":" The Central Park Hotel",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/1c/df/1e/36/exterior-view.jpg",
+      "price": 3359,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"Centrally located in the corporate hub with a multiplex in the vicinity, 15 minute drive from the airport and 5 minutes from the railway station."
+    },
+    {
+      "id":4,
+      "name":"Royal Orchid Central Pune",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/06/81/5e/15/royal-orchid-central.jpg",
+      "price": 4048,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"Royal Orchid Central – the upscale Business hotel centrally located in the heart of Pune City, which is carefully designed keeping in mind the diverse needs of today’s discerning global business traveler."
+    },
+    {
+      "id":5,
+      "name":"Hyatt Pune",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/23/e1/36/21/exterior.jpg",
+      "price": 5880,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"Hyatt Pune is an upscale lifestyle hotel for the urban traveler looking for distinctive indulgences. The hotel offers unique inviting experiences benefiting from its modern downtown location just 10 mins from Pune Airport."
+    },
+    {
+      "id":6,
+      "name":"Treebo Trend Luxe Suite",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/1a/43/e2/0a/treebo-trend-luxe-suite.jpg",
+      "price": 3308,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"True to its name, Treebo Trend Luxe Suites is a boutique property that offers 11 deluxe rooms with great amenities and comfort. It is centrally located and lies close to Lohegaon Airport."
+    },
+    {
+      "id":7,
+      "name":" ibis Pune Viman Nagar",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/1c/d8/6a/9d/exterior-view.jpg",
+      "price": 5520,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"ibis, the international economy hotel brand of Accor and the worldwide reference in the economy industry, has opened its doors to Pune with the launch of ibis Pune. "
+    },
+    {
+      "id":8,
+      "name":" Royal Orchid Golden Suites",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/1a/b7/d3/aa/royal-orchid-golden-suites.jpg",
+      "price": 4168,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"Royal Orchid Golden Suites is an excellent choice for travellers visiting Pune, offering a family-friendly environment alongside many helpful amenities designed to enhance your stay."
+    },
+    {
+      "id":9,
+      "name":"Lemon Tree Hotel, Viman Nagar, Pune",
+      "imageSrc":"https://media-cdn.tripadvisor.com/media/photo-s/1a/25/d7/b6/superior-room.jpg",
+      "price": 4607,
+      "best_site":"https://tse4.mm.bing.net/th?id=OIP.ARYx4ADBvdfwKQrazNDW5QHaDz&pid=Api&P=0",
+      "about":"Located in the heart of the IT hub of Pune, Lemon Tree Hotel, Viman Nagaris a short five-minute drive from Pune International Airport."
+    }
+   ],
+
+   "restaurants":[
+     {
+      "id":1,
+      "name":"Paasha",
+      "rating":4,
+      "type":"Indian, Vegetarian, Friendly Vegan",
+      "comment":"Loved the food & Service,Dinner at JW Marriott Pasha",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-f/09/42/95/53/paasha.jpg"
+     },
+     {
+      "id": 2,
+      "name":"Alto Vino",
+      "rating":5,
+      "type":"Wine Bar, Italian",
+      "comment":"I cannot fault Alto Vino and the staff. Bhoomi and her colleague Veena were very attentive throughout.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/0a/4d/53/58/alto-vino.jpg"
+     }, {
+      "id": 3,
+      "name":"Spice Kitchen",
+      "rating":4,
+      "type":"Indian, Asian",
+      "comment":"Food was very delicious and special thanks to Dinesh for making our day special . Nd team of spice was very polite.nd very helpful in term of service.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/0c/71/70/89/spice-kitchen.jpg" 
+    },
+     {
+      "id": 4,
+      "name":"Ukiyo",
+      "rating":5,
+      "type":"Japanese,Sushi",
+      "comment":"The staff is super courteous and make sure that you have a great time there. The food was exquisite. The Salmon Avocado roll was to die for.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/ac/0f/52/ukiyo.jpg"
+     },
+     {
+      "id": 5,
+      "name":"Aasmana",
+      "rating":5,
+      "type":"Indian, Bar",
+      "comment":"If you are looking for the best North Indian / Mughlai : Awadhi food in Pune, Ritz is the place. Their flavours are unmatched.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/ac/0c/1b/aasmana.jpg"
+     },
+     {
+      "id": 6,
+      "name":"Three Kitchens Restaurant and Bar",
+      "rating":4,
+      "type":"Indian,European",
+      "comment":"As the name suggests, Three Kitchens serves multi cuisine - Asian, Indian and Continental fare. The ambience is brilliant and the food is really tasty.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/ac/0f/20/western-grills.jpg"
+     },
+     {
+      "id": 7,
+      "name":"Masaic",
+      "rating":4,
+      "type":"Asian,Indian",
+      "comment":"Very good experience.. Muskan was very polite and taking care if each guest. Good ambience as well Such a good experience.",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/17/61/16/40/buffet.jpg"
+     },
+     {
+      "id": 8,
+      "name":"The Market",
+      "rating":4,
+      "type":"Indian, International",
+      "comment":"Their Japanese and Chinese food menu to be specific is amazing, I tried out a bunch of different dimsums and sushis and I enjoyed them all!",
+      "srcImg":"https://media-cdn.tripadvisor.com/media/photo-s/1a/55/33/56/the-market.jpg"
+     }
+   ]
+   
+}

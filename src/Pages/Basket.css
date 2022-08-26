@@ -1,0 +1,44 @@
+*{
+    text-align: left;
+    font-family: "Trip Sans VF","Trip Sans",Arial,sans-serif;
+}
+
+.review{
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 55%;
+   width: 30%;
+
+}
+
+.checkout-btn{
+    background-color: #f2b203;
+    width: 100%;
+    margin-top: 5%;
+    border-radius: 25px;
+}
+
+.checkout-btn:hover{
+    background-color: #fcc83b;
+}
+
+.unsure{
+    font-size: 14px;
+}
+
+.top{
+/* border: 2px solid black; */
+height: 100vh;
+}
+
+.cart{
+    margin: 3% 0%; 
+    width: 60%;
+}
+
+.bottom{
+    /* border: 2px solid blue; */
+    margin-left: 3%;
+    padding: 4%;
+
+}
