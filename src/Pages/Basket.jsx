@@ -8,16 +8,16 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import "./Cart.css";
+import "./Basket.css";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 
-const Cart = () => {
+const Basket = () => {
   return (
     <>
       <Container maxW="90%" padding="1rem" className="top">
         {/* ----------------------------Header----------------------------- */}
         <Heading as="h2" size="2xl" padding="0.75rem">
-          Cart
+          Basket
         </Heading>
         <Link to="/thingsToDo">
           <Flex>
@@ -339,4 +339,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Basket;
