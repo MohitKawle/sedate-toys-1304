@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "./Carousel";
-import styled from "styled-components";
 import { Center } from "@chakra-ui/react";
 import styles from './Things.module.css'
 const TopAttraction = () => {

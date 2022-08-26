@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Image, Text,Link, Input, InputGroup, InputLeftAddon, Checkbox, Stack, RadioGroup, Radio, Divider, Button } from '@chakra-ui/react'
-import { ChevronLeftIcon } from '@chakra-ui/icons'
+import { Box, Image, Text,Link, Input, InputGroup, InputLeftAddon, Checkbox, Stack, RadioGroup, Radio, Divider, Button, HStack, Icon} from '@chakra-ui/react'
+import {  ChevronLeftIcon } from '@chakra-ui/icons'
+import CircleIcon from './CircleIcon'
 
 const Checkout_page = () => {
   return (
@@ -226,7 +227,7 @@ const Checkout_page = () => {
 {/* Review Order Details started */}
         <Box 
         width={"360px"} 
-        border={"1px solid red"}
+        // border={"1px solid red"}
         marginTop={"25px"}
         >
          <Box
@@ -240,6 +241,45 @@ const Checkout_page = () => {
               marginLeft={"15px"}
               >Review Order Details</Text>
           </Box>
+          <Box display={"flex"}>
+          <Box padding={"20px"}>
+            <Image height={"100px"} width={"200px"} src='https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/1b/76/b9.jpg'  alt='order_details'/>
+          </Box>
+              <Box padding={"10px"}>
+             <Text fontSize={"15px"} fontWeight={"bold"}> Full Day Visit to City of Dreams Mumbai in Private Vehicle</Text>
+             <Box display={"flex"}>
+             <HStack gap={"-10px"}>
+                <CircleIcon  />
+                <CircleIcon />
+                <CircleIcon  />
+                <CircleIcon  />
+              </HStack>
+              <Text fontSize={"13px"}>(101 reviews)</Text>
+             </Box>
+             <Box fontSize={"13px"}>
+              <Text>City Tour in 6 Seater</Text>
+              <Text>Vehicle - 09:00</Text>
+              <Text>Saturday, 27 August, 2022</Text>
+              <Text>2 Adults</Text>
+              <Text>Non-refundable</Text>
+             </Box>
+              </Box>
+          </Box>
+          <Box>
+              <Box display={"flex"} justifyContent={"space-around"} fontSize={"13px"}>
+                <Text>Booking Fee {<Icon/>}</Text>
+                <Text>₹0.00</Text>
+              </Box>
+              <Box display={"flex"} justifyContent={"space-around"} fontSize={"13px"} >
+              <Text>Subtotal:</Text>
+                <Text>₹11,771.66</Text>
+              </Box>
+              <Box fontWeight={"bold"} display={"flex"} justifyContent={"space-around"} >
+              <Text>Total:</Text>
+                <Text>₹11,771.66</Text>
+              </Box>
+             </Box>
+          
          </Box>
 
  {/* Book with confidence started */}
@@ -254,6 +294,38 @@ const Checkout_page = () => {
               paddingTop={"20px"}
               marginLeft={"15px"}
               >Book with confidence</Text>
+          </Box>
+          <Divider marginTop={"20px"} />
+          <Box padding={"20px"}>
+            <Box  display={"flex"} gap={"20px"} marginTop={"10px"}>
+              <Box fontSize={"25px"}><i class="fa-solid fa-wallet"></i></Box>
+              <Box>
+                <Text fontWeight={"bold"}>Lowest price guarantee</Text>
+                <Text fontSize={"15px"}>Find it cheaper? We'll refund the difference</Text>
+              </Box>
+            </Box>
+            <Box  display={"flex"} gap={"20px"} marginTop={"10px"}>
+              <Box fontSize={"25px"}><i class="fa-solid fa-lock"></i></Box>
+              <Box>
+                <Text fontWeight={"bold"}>Privacy protection</Text>
+                <Text fontSize={"15px"}>We use SSL encryption to keep your data secure</Text>
+              </Box>
+            </Box>
+            <Box  display={"flex"} gap={"20px"} marginTop={"10px"}>
+              <Box fontSize={"25px"}><i class="fa-solid fa-headphones"></i></Box>
+              <Box>
+                <Text fontWeight={"bold"}>24/7 global support</Text>
+                <Text fontSize={"15px"}>Get the answers you need, when you need them</Text>
+              </Box>
+            </Box>
+            <Box  display={"flex"} gap={"20px"} marginTop={"10px"}>
+              <Box fontSize={"25px"}><i class="fa-solid fa-phone"></i></Box>
+              <Box>
+                <Text fontWeight={"bold"}>Give us a call</Text>
+                <Text fontSize={"15px"}>We’d be happy to help you out with your booking</Text>
+                <Link fontSize={"15px"} borderBottom={"1px"}>Call now: 000-0800-100-6999</Link>
+              </Box>
+            </Box>
           </Box>
          </Box>
         </Box>
