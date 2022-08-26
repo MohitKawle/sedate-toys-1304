@@ -36,7 +36,8 @@ const reducer=(state=initialState,{type , payload})=>{
             return{ ...state , isLoading:false, places:payload , isError:false}
         }
         case types.PLACES_FAILURE:{
-
+            return{ ...state , isLoading:false , isError:true }
+        }
 
         case types.RESTAURANTS_LIST_REQUEST:{
 
