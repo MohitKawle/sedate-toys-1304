@@ -64,6 +64,7 @@ export const placesdata = (payload) => (dispatch) =>{
     axios.get("http://localhost:8000/items",payload)
     .then((r)=>{dispatch(placesSuccess(r.data))})
     .catch((e)=>{dispatch(placesFailure(e))})
+}
 
 export const getRestuarantList = (dispatch) => {
 
