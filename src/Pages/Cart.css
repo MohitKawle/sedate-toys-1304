@@ -1,3 +1,8 @@
+*{
+    text-align: left;
+    font-family: "Trip Sans VF","Trip Sans",Arial,sans-serif;
+}
+
 .review{
     border-radius: 20px;
     position: absolute;
