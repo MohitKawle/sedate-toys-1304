@@ -1,87 +1,109 @@
-import React,{useEffect,useState} from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import {useParams} from "react-router-dom";
-import { placesdata } from '../../Redux/AppReducer/action';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { placesdata } from "../../Redux/AppReducer/action";
 import styles from "./SinglePage.module.css";
-import { IoIosContacts } from 'react-icons/io';
-import { Heading, Text } from '@chakra-ui/react';
-import items from './data.json';
-
+import { IoIosContacts } from "react-icons/io";
+import { Heading, Text } from "@chakra-ui/react";
+import items from "./data.json";
 
 import bnner1 from "./Image/bnner1.jpg";
 import bnner2 from "./Image/bnner2.jpg";
 import bottom from "./Image/bottom.jpg";
 
-
 const SinglePage = () => {
-    const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
-    const {id} = useParams();
-    const placesData=useSelector((state)=>state.AppReducer.places)
-  
-  const [currentData,setCurrentData]=useState({});
-  
-  useEffect(()=>{
-    if(placesData?.length ==0){
+  const { id } = useParams();
+  const placesData = useSelector((state) => state.AppReducer.places);
+
+  const [currentData, setCurrentData] = useState({});
+
+  useEffect(() => {
+    if (placesData?.length == 0) {
       dispatch(placesdata());
     }
-  },[dispatch,placesData.length]);
-  
-  useEffect(()=>{
-    if(id){
+  }, [dispatch, placesData.length]);
+
+  useEffect(() => {
+    if (id) {
       //filter the album based on the id
-      const data =  placesData.find((album)=>album.id === Number(id) );
+      const data = placesData.find((album) => album.id === Number(id));
       data && setCurrentData(data);
     }
-  },[id,placesData]);
+  }, [id, placesData]);
   console.log(placesData);
 
-//    let temp=[];
-    const Data = items.items;
-    // if(Data.length>0 ){
-    //     for(let i=0;i<Data.length;i++){
-    //         if(id==Data[i].id){
-    //             temp.push(Data[i])
-    //         }
-    //     }
-    // }
-    console.log(Data);
+  //    let temp=[];
+  const Data = items.items;
+  // if(Data.length>0 ){
+  //     for(let i=0;i<Data.length;i++){
+  //         if(id==Data[i].id){
+  //             temp.push(Data[i])
+  //         }
+  //     }
+  // }
+  console.log(Data);
 
-    const AddToBag = () =>{
-        localStorage.setItem("Data",JSON.stringify(Data));
-    };
-  
-    return (
-        <>
-        <div className={styles.head}>
-      <div className={styles.single1}>
-        <h1 style={{fontSize:"30px"}}>{currentData.title}</h1>
-        <div> 
-          <div><h2>{currentData.price}</h2></div>
-        </div>
-        <div>
-          <img style={{width:"900px", height:"600px"}} src={currentData.imageUrl} alt={currentData.name} />
-        </div> 
-      </div>
-      <div className={styles.single2}>
-        <div className={styles.single2a}>
-        <input type="date" />
-        <p style={{display:"flex",border:"1px solid grey",borderRadius:"10px", width:"60px",justifyContent:"space-around",alignItems:"center"}}><IoIosContacts fontSize="30px"/>2</p>
-        </div>
+  const AddToBag = () => {
+    localStorage.setItem("Data", JSON.stringify(Data));
+  };
 
-        <div className={styles.single2b}>
+  return (
+    <>
+      <div className={styles.head}>
+        <div className={styles.single1}>
+          <h1 style={{ fontSize: "30px" }}>{currentData.title}</h1>
+          <div>
+            <div>
+              <h2>{currentData.price}</h2>
+            </div>
+          </div>
+          <div>
+            <img
+              style={{ width: "900px", height: "600px" }}
+              src={currentData.imageUrl}
+              alt={currentData.name}
+            />
+          </div>
+        </div>
+        <div className={styles.single2}>
+          <div className={styles.single2a}>
+            <input type="date" />
+            <p
+              style={{
+                display: "flex",
+                border: "1px solid grey",
+                borderRadius: "10px",
+                width: "60px",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
+              <IoIosContacts fontSize="30px" />2
+            </p>
+          </div>
+
+          <div className={styles.single2b}>
             <p>Booking in advance</p>
-            <p style={{width:"200px"}}>from $380.00 per adult (price varies by grouo size)</p>
-        </div>
-        <button className={styles.press} onClick={AddToBag}>Check availability</button>
+            <p style={{ width: "200px" }}>
+              from $380.00 per adult (price varies by grouo size)
+            </p>
+          </div>
+          <button className={styles.press} onClick={AddToBag}>
+            Check availability
+          </button>
 
-        <Text padding='30px'>Reserve now & pay later: Save your spot free of charge with flexible booking. Learn more</Text>
-        <Text padding='30px'>Free cancellation</Text>
+          <Text padding="30px">
+            Reserve now & pay later: Save your spot free of charge with flexible
+            booking. Learn more
+          </Text>
+          <Text padding="30px">Free cancellation</Text>
+        </div>
       </div>
-      </div>
-<div style={{marginTop:"50px"}}>
-    <Heading>About</Heading>
-      <div className={styles.about}>
+      <div style={{ marginTop: "50px" }}>
+        <Heading>About</Heading>
+        <div className={styles.about}>
           <div className={styles.abt1}>
             <h4
               style={{
@@ -301,7 +323,7 @@ const SinglePage = () => {
             <p style={{ fontSize: "18px" }}>View all safety measures</p>
           </button>
         </div>
-        
+
         <br />
         <br />
         <img style={{ width: "93%", marginLeft: "40px" }} src={bnner1} alt="" />
@@ -316,10 +338,9 @@ const SinglePage = () => {
           src={bottom}
           alt=""
         />
-    </div>
+      </div>
     </>
-      
-    );
-  };
+  );
+};
 
-export default SinglePage
+export default SinglePage;
