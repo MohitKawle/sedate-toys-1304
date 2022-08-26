@@ -17,6 +17,21 @@ export const hotelListFailure = () => {
     return { type: types.HOTEL_LIST_FALIURE }
 }
 
+export const restaurantListRequest = () => {
+
+    return { type: types.RESTAURANTS_LIST_REQUEST }
+}
+
+export const restaurantListSuccess = (payload) => {
+
+    return { type: types.RESTAURANTS_LIST_SUCCESS, payload }
+}
+
+export const restaurantListFailure = () => {
+
+    return { type: types.RESTAURANTS_LIST_FALIURE }
+}
+
 
 export const getHotelList = (dispatch) => {
 
@@ -27,6 +42,7 @@ export const getHotelList = (dispatch) => {
         })
         .catch((err) => dispatch(hotelListFailure()));
 }
+
 
 export const placesRequest = () => {
 
@@ -48,4 +64,14 @@ export const placesdata = (payload) => (dispatch) =>{
     axios.get("http://localhost:8000/items",payload)
     .then((r)=>{dispatch(placesSuccess(r.data))})
     .catch((e)=>{dispatch(placesFailure(e))})
+
+export const getRestuarantList = (dispatch) => {
+
+    dispatch(restaurantListRequest());
+   return axios.get("http://localhost:8080/restaurants")
+        .then((res) => {
+            dispatch(restaurantListSuccess(res.data))
+        })
+        .catch((err) => dispatch(restaurantListFailure()));
+
 }
