@@ -3,8 +3,53 @@
     height:50px;
     border: 1px solid red;
     margin: auto;
+    display: flex;
+    position: relative;
 }
 
 .logo{
     width:200px;
+}
+.divright2{
+    display: flex;
+    text-align: right;
+    margin-left: auto;
+}
+.divright2 > div{
+    margin: auto;
+    padding: 3px 1px 0px 4px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 5px;
+}
+.signin_Button{
+    background-color: black;
+    color: white;
+    
+    
+}
+.divright2  :hover{
+    cursor: pointer;
+    background-color: rgb(207, 207, 207);
+    
+}
+.signin_Button:hover{
+    background-color: black;
+    color: white;
+}
+
+.dropdown_img{
+    width: 30px;
+    height :30px;
+    border-radius: 50%;
+}
+.logo_img{
+    width:16px;
+    margin: auto;
+    margin-right: 5px;
+}
+.flex_logo{
+    display: flex;
 }

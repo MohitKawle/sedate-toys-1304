@@ -342,4 +342,5 @@ const PaymentPage = () => {
   )
 }
 
-export {PaymentPage};
+export  {PaymentPage};
+
