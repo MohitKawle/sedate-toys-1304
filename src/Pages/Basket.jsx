@@ -12,6 +12,7 @@ import "./Basket.css";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket, removeFromBasket } from "../Redux/AppReducer/action";
+import Navbar from "../Components/Navbar";
 
 const Basket = () => {
   const dispatch = useDispatch();
@@ -37,6 +38,10 @@ const Basket = () => {
 
   return (
     <>
+      <Navbar />
+      <br />
+      <Divider width="100%" />
+
       <Container maxW="90%" padding="1rem" className="top">
         {/* ----------------------------Header----------------------------- */}
         <Heading as="h2" size="2xl" padding="0.75rem">

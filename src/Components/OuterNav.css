@@ -1,0 +1,31 @@
+.wraping{
+    /* border: 1px solid green; */
+    width: 70%;
+    margin: auto;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.nav-box{
+    /* border: 1px solid blue; */
+    width: 45%;
+    height: 50px;
+}
+
+.nav-box:hover{
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.outer-nav-item:hover{
+    font-weight: bolder;
+    background-color: rgb(219, 218, 218);
+    color: white;
+}
+
+.outer-nav-item{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 50px;
+    justify-content: space-between;
+}
