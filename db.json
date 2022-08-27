@@ -568,29 +568,6 @@
     }
   ],
   "basket": [
-    {
-      "id": 6,
-      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/66/23/ab/caption.jpg?w=300&h=300&s=1",
-      "title": "Guided Highlights of Pune Car Tour with a local (4 Hrs Sightseeing in AC Car)",
-      "price": "100"
-    },
-    {
-      "id": 3,
-      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/80/20/35/caption.jpg?w=300&h=300&s=1",
-      "title": "Pune to Lonavala Monsoon Drive in Private Vehicle",
-      "price": "250"
-    },
-    {
-      "id": 1,
-      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/56/72/1b/caption.jpg?w=300&h=300&s=1",
-      "title": "Tajmahal journey Airport taxi ",
-      "price": "380"
-    },
-    {
-      "id": 2,
-      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/63/60/30/caption.jpg?w=300&h=300&s=1",
-      "title": "Singhagad-Panshet-Lavasa Trip (Guided Full Day Sightseeing Tour)",
-      "price": "128"
-    }
+    
   ]
 }

@@ -56,6 +56,25 @@ export const addToBasketFailure = () => {
   };
 };
 
+export const removeFromBasketRequest = () => {
+  return {
+    type: types.REMOVE_FROM_BASKET_REQUEST,
+  };
+};
+
+export const removeFromBasketSuccess = (id) => {
+  return {
+    type: types.REMOVE_FROM_BASKET_SUCCESS,
+    payload: id,
+  };
+};
+
+export const removeFromBasketFailure = () => {
+  return {
+    type: types.REMOVE_FROM_BASKET_FAILURE,
+  };
+};
+
 export const getHotelList = (dispatch) => {
   dispatch(hotelListRequest());
   return axios
@@ -110,17 +129,6 @@ export const getSightList = (dispatch) => {
     .catch((err) => dispatch(sightListFailure()));
 };
 
-// export const removeFromBasket = (id) => async (dispatch) => {
-//   const updatedBasket = basket.filter(
-//     (basketItem) => basketItem.id !== id
-//   );
-
-//   dispatch({
-//     type: types.REMOVE_FROM_BASKET,
-//     payload: updatedBasket,
-//   });
-// };
-
 export const addToBasket = () => (dispatch) => {
   dispatch(addToBasketRequest());
   return axios
@@ -133,6 +141,7 @@ export const addToBasket = () => (dispatch) => {
       dispatch(addToBasketFailure(e));
     });
 };
+
 
 
 export const addToCartRequest = () => {
@@ -154,4 +163,17 @@ export const addToCartFailure = () => {
   };
 };
 
+
+
+export const removeFromBasket = (id) => (dispatch) => {
+  dispatch(removeFromBasketRequest());
+  return axios
+    .delete(`http://localhost:8080/basket/${id}`)
+    .then((res) => {
+      return dispatch(removeFromBasketSuccess());
+    })
+    .catch((e) => {
+      dispatch(removeFromBasketFailure(e));
+    });
+};
 

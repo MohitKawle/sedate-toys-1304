@@ -21,9 +21,17 @@ const Basket = () => {
   useEffect(() => {
     dispatch(addToBasket());
   }, [dispatch]);
-  const removeFromBasket = (id) => {
+
+  const removingFromBasket = (id) => {
     if (window.confirm("Are you sure you want to remove this?")) {
-      dispatch(removeFromBasket(id));
+      let newBasket = basket.filter((item) => item.id !== id);
+      dispatch(removeFromBasket(id, { basket: newBasket }))
+        .then(() => {
+          dispatch(addToBasket());
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     }
   };
 
@@ -71,7 +79,8 @@ const Basket = () => {
                                 <Box>Edit</Box>
                               </Link>
                               <Box
-                              // onClick={() => removeFromBasket(item.id)}
+                                onClick={() => removingFromBasket(item.id)}
+                                _hover={{ cursor: "pointer" }}
                               >
                                 Remove
                               </Box>
