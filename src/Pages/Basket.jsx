@@ -74,17 +74,12 @@ const Basket = () => {
                             />
                           </Box>
                           <Box>
-                            <Flex gap={30}>
-                              <Link to="/places/:id">
-                                <Box>Edit</Box>
-                              </Link>
-                              <Box
-                                onClick={() => removingFromBasket(item.id)}
-                                _hover={{ cursor: "pointer" }}
-                              >
-                                Remove
-                              </Box>
-                            </Flex>
+                            <Box
+                              onClick={() => removingFromBasket(item.id)}
+                              _hover={{ cursor: "pointer" }}
+                            >
+                              <u>Remove</u>
+                            </Box>
                           </Box>
                         </Flex>
                       </Box>
