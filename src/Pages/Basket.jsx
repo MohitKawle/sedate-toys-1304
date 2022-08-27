@@ -19,7 +19,7 @@ const Basket = () => {
         <Heading as="h2" size="2xl" padding="0.75rem">
           Basket
         </Heading>
-        <Link to="/thingsToDo">
+        <Link to="/things">
           <Flex>
             <Box>
               <ArrowBackIcon />
@@ -49,7 +49,9 @@ const Basket = () => {
                     </Box>
                     <Box>
                       <Flex gap={30}>
-                        <Box>Edit</Box>
+                        <Link to="/places/:id">
+                          <Box>Edit</Box>
+                        </Link>
                         <Box>Remove</Box>
                       </Flex>
                     </Box>

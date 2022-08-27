@@ -1,103 +1,92 @@
-import * as types from './actionTypes';
-import axios from 'axios';
-
+import * as types from "./actionTypes";
+import axios from "axios";
 
 export const hotelListRequest = () => {
-
-    return { type: types.HOTEL_LIST_REQUEST }
-}
+  return { type: types.HOTEL_LIST_REQUEST };
+};
 
 export const hotelListSuccess = (payload) => {
-
-    return { type: types.HOTEL_LIST_SUCCESS, payload }
-}
+  return { type: types.HOTEL_LIST_SUCCESS, payload };
+};
 
 export const hotelListFailure = () => {
-
-    return { type: types.HOTEL_LIST_FAILURE }
-}
+  return { type: types.HOTEL_LIST_FAILURE };
+};
 
 export const restaurantListRequest = () => {
-
-    return { type: types.RESTAURANTS_LIST_REQUEST }
-}
+  return { type: types.RESTAURANTS_LIST_REQUEST };
+};
 
 export const restaurantListSuccess = (payload) => {
-
-    return { type: types.RESTAURANTS_LIST_SUCCESS, payload }
-}
+  return { type: types.RESTAURANTS_LIST_SUCCESS, payload };
+};
 
 export const restaurantListFailure = () => {
+  return { type: types.RESTAURANTS_LIST_FAILURE };
+};
 
-    return { type: types.RESTAURANTS_LIST_FAILURE }
-}
+export const sightListRequest = () => {
+  return { type: types.SIGHT_LIST_REQUEST };
+};
 
-export const sightListRequest =()=>{
+export const sightListSuccess = (payload) => {
+  return { type: types.SIGHT_LIST_SUCCESS, payload };
+};
 
-    return {type:types.SIGHT_LIST_REQUEST }
-}
-
-export const sightListSuccess =(payload)=>{
-
-    return {type:types.SIGHT_LIST_SUCCESS, payload }
-}
-
-export const sightListFailure =()=>{
-
-    return {type:types.SIGHT_LIST_FAILURE }
-}
-
+export const sightListFailure = () => {
+  return { type: types.SIGHT_LIST_FAILURE };
+};
 
 export const getHotelList = (dispatch) => {
-
-    dispatch(hotelListRequest());
-   return axios.get("http://localhost:8080/hotels")
-        .then((res) => {
-            dispatch(hotelListSuccess(res.data))
-        })
-        .catch((err) => dispatch(hotelListFailure()));
-}
-
+  dispatch(hotelListRequest());
+  return axios
+    .get("http://localhost:8080/hotels")
+    .then((res) => {
+      dispatch(hotelListSuccess(res.data));
+    })
+    .catch((err) => dispatch(hotelListFailure()));
+};
 
 export const placesRequest = () => {
-
-    return { type: types.PLACES_REQUEST }
-}
+  return { type: types.PLACES_REQUEST };
+};
 
 export const placesSuccess = (payload) => {
-
-    return { type: types.PLACES_SUCCESS, payload }
-}
+  return { type: types.PLACES_SUCCESS, payload };
+};
 
 export const placesFailure = () => {
+  return { type: types.PLACES_FAILURE };
+};
 
-    return { type: types.PLACES_FAILURE }
-}
-
-export const placesdata = (payload) => (dispatch) =>{
-    dispatch(placesRequest())
-    axios.get("http://localhost:8000/items",payload)
-    .then((r)=>{dispatch(placesSuccess(r.data))})
-    .catch((e)=>{dispatch(placesFailure(e))})
-}
+export const placesdata = (payload) => (dispatch) => {
+  dispatch(placesRequest());
+  axios
+    .get("http://localhost:8000/items", payload)
+    .then((r) => {
+      dispatch(placesSuccess(r.data));
+    })
+    .catch((e) => {
+      dispatch(placesFailure(e));
+    });
+};
 
 export const getRestuarantList = (dispatch) => {
-
-    dispatch(restaurantListRequest());
-   return axios.get("http://localhost:8080/restaurants")
-        .then((res) => {
-            dispatch(restaurantListSuccess(res.data))
-        })
-        .catch((err) => dispatch(restaurantListFailure()));
-
-}
+  dispatch(restaurantListRequest());
+  return axios
+    .get("http://localhost:8080/restaurants")
+    .then((res) => {
+      dispatch(restaurantListSuccess(res.data));
+    })
+    .catch((err) => dispatch(restaurantListFailure()));
+};
 
 export const getSightList = (dispatch) => {
-
-    dispatch(sightListRequest());
-   return axios.get("http://localhost:8080/sight")
-        .then((res) => {
-            dispatch(sightListSuccess(res.data))
-        })
-        .catch((err) => dispatch(sightListFailure()));
-}
+  dispatch(sightListRequest());
+  return axios
+    .get("http://localhost:8080/sight")
+    .then((res) => {
+      dispatch(sightListSuccess(res.data));
+    })
+    .catch((err) => dispatch(sightListFailure()));
+};
