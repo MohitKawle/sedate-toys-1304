@@ -11,6 +11,7 @@ import Review from "./Review";
 import { Link } from "react-router-dom";
 import PlacesCard from "./PlacesCard";
 import InnerNav from "../InnerNavbar/InnerNav";
+import Navbar from "../Navbar";
 
 const Things = () => {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ const Things = () => {
   console.log(places);
   return (
     <>
+      <Navbar />
       <InnerNav />
       <div style={{ margin: "50px" }}>
         <div className={styles.nav}>
