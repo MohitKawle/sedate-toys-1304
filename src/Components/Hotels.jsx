@@ -12,6 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import InnerNav from "./InnerNavbar/InnerNav";
+import Navbar from "./Navbar";
 
 const Hotels = () => {
   let dispatch = useDispatch();
@@ -52,6 +53,7 @@ const Hotels = () => {
 
   return (
     <>
+      <Navbar />
       <InnerNav />
       <div className={styles.container}>
         <div className={styles.container}>
@@ -63,12 +65,12 @@ const Hotels = () => {
             <div className={styles.calenderDiv}>
               <div className={styles.outerDiv1}>
                 <div className={styles.innerDiv1}>
-                  <input type="date" className={styles.checkIn}/>
+                  <input type="date" className={styles.checkIn} />
                 </div>
               </div>
               <div className={styles.outerDiv2}>
                 <div className={styles.innerDiv2}>
-                <input type="date" className={styles.checkIn}/>
+                  <input type="date" className={styles.checkIn} />
                 </div>
               </div>
               <div className={styles.outerDiv3}>

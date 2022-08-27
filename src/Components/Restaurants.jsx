@@ -13,6 +13,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import InnerNav from "./InnerNavbar/InnerNav";
+import Navbar from "./Navbar";
 
 const Restaurants = () => {
   let dispatch = useDispatch();
@@ -41,7 +42,7 @@ const Restaurants = () => {
   console.log(sort);
   return (
     <>
-      {" "}
+      <Navbar />
       <InnerNav />
       <div className={styles.container}>
         <div className={styles.top}>
