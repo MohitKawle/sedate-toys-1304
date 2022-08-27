@@ -81,7 +81,7 @@ export const placesFailure = () => {
 export const placesdata = (payload) => (dispatch) => {
   dispatch(placesRequest());
   axios
-    .get("http://localhost:8000/items", payload)
+    .get("http://localhost:8080/items", payload)
     .then((r) => {
       dispatch(placesSuccess(r.data));
     })
