@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { placesdata } from "../../Redux/AppReducer/action";
+import { addToCart, addToCartFailure, addToCartRequest, addToCartSuccess, placesdata } from "../../Redux/AppReducer/action";
 import styles from "./SinglePage.module.css";
 import { IoIosContacts } from "react-icons/io";
 import { Heading, Text } from "@chakra-ui/react";
+import axios from 'axios';
 
 import bnner1 from "./Image/bnner1.jpg";
 import bnner2 from "./Image/bnner2.jpg";
@@ -31,7 +32,24 @@ const SinglePage = () => {
       data && setCurrentData(data);
     }
   }, [id, placesData]);
-  console.log(placesData);
+  
+
+  const handleCart = () =>{
+    // let payload = {
+    //   id:currentData.id,
+    //   title:currentData.title,
+    //   price:currentData.price,
+    //   imageUrl:currentData.imageUrl,
+    // } 
+    let payload =placesData.find((item)=>item.id===Number(id));
+    console.log(payload)
+
+      dispatch(addToCartRequest())
+     axios.post("http://localhost:8080/basket",payload)
+      .then(()=>dispatch(addToCartSuccess()))
+      .catch((e)=>dispatch(addToCartFailure(e)))
+    
+  }
 
   return (
     <>
@@ -74,7 +92,7 @@ const SinglePage = () => {
               from $380.00 per adult (price varies by grouo size)
             </p>
           </div>
-          <button className={styles.press}>Check availability</button>
+          <button className={styles.press} onClick={handleCart}>Add To Basket</button>
 
           <Text padding="30px">
             Reserve now & pay later: Save your spot free of charge with flexible
