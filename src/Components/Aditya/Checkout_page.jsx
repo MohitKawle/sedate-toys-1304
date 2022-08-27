@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Image,
@@ -18,9 +18,25 @@ import {
 } from "@chakra-ui/react";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import CircleIcon from "./CircleIcon";
-import { Link as Returning } from "react-router-dom";
+import { Link as Returning, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addToBasket } from "../../Redux/AppReducer/action";
 
 const CheckoutPage = () => {
+  const dispatch=useDispatch()
+  const Checkout = useSelector((state) => state.AppReducer.basket);
+  // console.log(Checkout)
+ 
+useEffect(() => {
+    dispatch(addToBasket());
+  }, [dispatch]);
+
+const navigate=useNavigate();
+
+function NextToPayment(){
+  navigate("/payment")
+}
+
   return (
     <Box>
       <Image
@@ -158,7 +174,8 @@ const CheckoutPage = () => {
               <Text fontWeight={"bold"} display={"flex"}>
                 Name <Text color={"red"}> *</Text>
               </Text>
-              <Text fontSize={"15px"}>adityamuthal.2208@gmail.com</Text>
+              {/* <Text fontSize={"15px"}>adityamuthal.2208@gmail.com</Text> */}
+              <Input />
             </Box>
             <Box marginTop={"10px"}>
               <Text fontWeight={"bold"} display={"flex"}>
@@ -293,6 +310,7 @@ const CheckoutPage = () => {
               color={"white"}
               borderRadius={"30px"}
               _hover={{ textDecoration: "none" }}
+              onClick={NextToPayment}
             >
               Next
             </Button>
@@ -305,78 +323,90 @@ const CheckoutPage = () => {
           // border={"1px solid red"}
           marginTop={"25px"}
         >
+
           <Box
             boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
             borderRadius={"5px"}
           >
-            <Box>
-              <Text
-                fontSize={"24px"}
-                fontWeight={"700"}
-                paddingTop={"20px"}
-                marginLeft={"15px"}
-              >
-                Review Order Details
-              </Text>
-            </Box>
-            <Box display={"flex"}>
-              <Box padding={"20px"}>
-                <Image
-                  height={"100px"}
-                  width={"200px"}
-                  src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/07/1b/76/b9.jpg"
-                  alt="order_details"
-                />
-              </Box>
-              <Box padding={"10px"}>
-                <Text fontSize={"15px"} fontWeight={"bold"}>
-                  {" "}
-                  Full Day Visit to City of Dreams Mumbai in Private Vehicle
-                </Text>
+               {
+                Checkout?.length >0 && Checkout.map((item)=>{
+                  return(
+                  <div key={item.id}>
+                  <Box  >
+                  <Text 
+                    fontSize={"24px"}
+                    fontWeight={"700"}
+                    paddingTop={"20px"}
+                    marginLeft={"15px"}
+                  >
+                    Review Order Details
+                  </Text>
+                </Box>
                 <Box display={"flex"}>
-                  <HStack gap={"-10px"}>
-                    <CircleIcon />
-                    <CircleIcon />
-                    <CircleIcon />
-                    <CircleIcon />
-                  </HStack>
-                  <Text fontSize={"13px"}>(101 reviews)</Text>
+               
+                  <Box padding={"20px"}>
+                    <Image
+                      height={"100px"}
+                      width={"200px"}
+                      src={item.imageUrl}
+                      alt="order_details"
+                    />
+                  </Box>
+                  <Box padding={"10px"}>
+                    <Text fontSize={"15px"} fontWeight={"bold"}>
+                      {" "}
+                      {item.title}
+                    </Text>
+                    <Box display={"flex"}>
+                      <HStack gap={"-10px"}>
+                        <CircleIcon />
+                        <CircleIcon />
+                        <CircleIcon />
+                        <CircleIcon />
+                      </HStack>
+                      <Text fontSize={"13px"}>(101 reviews)</Text>
+                    </Box>
+                    <Box fontSize={"13px"}>
+                      <Text>City Tour in 6 Seater</Text>
+                      <Text>Vehicle - 09:00</Text>
+                      <Text>Saturday, 27 August, 2022</Text>
+                      <Text>2 Adults</Text>
+                      <Text>Non-refundable</Text>
+                    </Box>
+                  </Box>
                 </Box>
-                <Box fontSize={"13px"}>
-                  <Text>City Tour in 6 Seater</Text>
-                  <Text>Vehicle - 09:00</Text>
-                  <Text>Saturday, 27 August, 2022</Text>
-                  <Text>2 Adults</Text>
-                  <Text>Non-refundable</Text>
+                <Box>
+                  <Box
+                    display={"flex"}
+                    justifyContent={"space-around"}
+                    fontSize={"13px"}
+                  >
+                    <Text>Booking Fee {<Icon />}</Text>
+                    <Text>₹0.00</Text>
+                  </Box>
+                  <Box
+                    display={"flex"}
+                    justifyContent={"space-around"}
+                    fontSize={"13px"}
+                  >
+                    <Text>Subtotal:</Text>
+                    <Text>₹{item.price}</Text>
+                  </Box>
+                  <Box
+                    fontWeight={"bold"}
+                    display={"flex"}
+                    justifyContent={"space-around"}
+                  >
+                    <Text>Total:</Text>
+                    <Text>₹{item.price}</Text>
+                  </Box>
                 </Box>
-              </Box>
-            </Box>
-            <Box>
-              <Box
-                display={"flex"}
-                justifyContent={"space-around"}
-                fontSize={"13px"}
-              >
-                <Text>Booking Fee {<Icon />}</Text>
-                <Text>₹0.00</Text>
-              </Box>
-              <Box
-                display={"flex"}
-                justifyContent={"space-around"}
-                fontSize={"13px"}
-              >
-                <Text>Subtotal:</Text>
-                <Text>₹11,771.66</Text>
-              </Box>
-              <Box
-                fontWeight={"bold"}
-                display={"flex"}
-                justifyContent={"space-around"}
-              >
-                <Text>Total:</Text>
-                <Text>₹11,771.66</Text>
-              </Box>
-            </Box>
+                </div>
+                  )
+                })
+                
+              }
+            
           </Box>
 
           {/* Book with confidence started */}
@@ -455,6 +485,7 @@ const CheckoutPage = () => {
       marginBottom={"30px"}
       fontSize={"12px"}
       color={"grey"}
+      textAlign={"center"}
       >© 2022 TripAdvisor LLC All rights reserved. Tripadvisor <Link color={"#188ead"}>Terms of Use</Link> and <Link color={"#188ead"} >Privacy Policy</Link>.</Text>
      </Box>
 
