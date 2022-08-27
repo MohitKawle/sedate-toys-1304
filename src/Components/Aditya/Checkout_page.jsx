@@ -448,20 +448,20 @@ const CheckoutPage = () => {
           </Box>
         </Box>
       </Box>
-      <Box textAlign={"center"}>
-        <Text
-          marginTop={"30px"}
-          marginBottom={"30px"}
-          fontSize={"12px"}
-          color={"grey"}
-        >
-          © 2022 TripAdvisor LLC All rights reserved. Tripadvisor{" "}
-          <Link color={"#188ead"}>Terms of Use</Link> and{" "}
-          <Link color={"#188ead"}>Privacy Policy</Link>.
-        </Text>
-      </Box>
+
+    
+     <Box textAlign={"center"}>
+     <Text marginTop={"30px"} 
+      marginBottom={"30px"}
+      fontSize={"12px"}
+      color={"grey"}
+      >© 2022 TripAdvisor LLC All rights reserved. Tripadvisor <Link color={"#188ead"}>Terms of Use</Link> and <Link color={"#188ead"} >Privacy Policy</Link>.</Text>
+     </Box>
+
     </Box>
   );
 };
 
+
 export  {CheckoutPage};
+
