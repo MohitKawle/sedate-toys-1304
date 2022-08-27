@@ -6,10 +6,12 @@ import DropDown from "./SignIn/DropDown";
 
 import navbar from "../Components/navbar.module.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Navbar = () => {
   const [SignIn, SetSignIn] = useState(1);
   const [dropdown_nav, setDropDown_nav] = useState(0);
   console.log(SignIn);
+  const basket = useSelector((state) => state.AppReducer.basket);
 
   return (
     <>
@@ -65,7 +67,22 @@ const Navbar = () => {
                 />
               </Link>
             </div>
-            <Link to="/basket">Basket</Link>
+            <Link to="/basket">
+              Basket
+              <span
+                style={{
+                  border: "1px solid red",
+                  borderRadius: "60px",
+                  position: "relative",
+                  bottom: "10px",
+                  right: "5px",
+                  padding: "0px 5px",
+                  backgroundColor: "red",
+                }}
+              >
+                <b style={{ color: "white" }}>{basket.length}</b>
+              </span>
+            </Link>
           </div>
         </div>
       </div>
