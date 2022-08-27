@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import homepage from "./homepage.module.css"
-import Carousel from '../Components/Carousal'
+import Carousel31 from '../Components/Carousal31'
 const Homepage = () => {
   return (<>
     <Navbar />
@@ -29,7 +29,7 @@ const Homepage = () => {
 
         </div>
         <div>
-          { <Carousel/>}
+          { <Carousel31/>}
         </div>
       </div>
 
