@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCart, addToCartFailure, addToCartRequest, addToCartSuccess, placesdata } from "../../Redux/AppReducer/action";
+import { addToCartFailure, addToCartRequest, addToCartSuccess, placesdata } from "../../Redux/AppReducer/action";
 import styles from "./SinglePage.module.css";
 import { IoIosContacts } from "react-icons/io";
 import { Heading, Text } from "@chakra-ui/react";
@@ -20,7 +20,7 @@ const SinglePage = () => {
   const [currentData, setCurrentData] = useState({});
 
   useEffect(() => {
-    if (placesData?.length == 0) {
+    if (placesData?.length === 0) {
       dispatch(placesdata());
     }
   }, [dispatch, placesData.length]);

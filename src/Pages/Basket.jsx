@@ -74,7 +74,7 @@ const Basket = () => {
                           <Box>
                             <img
                               src={item.imageUrl}
-                              alt="image"
+                              alt="img"
                               width="120px"
                             />
                           </Box>
