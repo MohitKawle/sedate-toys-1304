@@ -126,6 +126,7 @@
    border-top-right-radius: 40px;
    margin-top: 2%;
    font-size: 15px;
+   text-align: center;
 }
 .description>p{
     padding-bottom: 5%;

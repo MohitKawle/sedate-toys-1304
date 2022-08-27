@@ -38,6 +38,7 @@ const Restaurants = () => {
     dispatch(getRestuarantList);
   }, [dispatch]);
 
+  console.log(sort);
   return (
     <>
       {" "}

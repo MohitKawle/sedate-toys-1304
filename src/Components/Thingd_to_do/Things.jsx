@@ -19,7 +19,7 @@ const Things = () => {
 
   useEffect(() => {
     dispatch(placesdata());
-  }, []);
+  }, [dispatch]);
   console.log(places);
   return (
     <>
