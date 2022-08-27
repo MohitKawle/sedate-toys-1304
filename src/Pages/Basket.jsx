@@ -16,7 +16,8 @@ import { addToBasket, removeFromBasket } from "../Redux/AppReducer/action";
 const Basket = () => {
   const dispatch = useDispatch();
   const basket = useSelector((state) => state.AppReducer.basket);
-  console.log(basket);
+  let totalPrice = 0;
+
   useEffect(() => {
     dispatch(addToBasket());
   }, [dispatch]);
@@ -44,203 +45,143 @@ const Basket = () => {
           </Flex>
         </Link>
         {/* -----------------------------Main Cart------------------------------ */}
-        {/* {basket.length <= 0 ? ( */}
-        // <Heading>Your Basket is Empty!</Heading>
-        {/* ) : ( */}
-        <Box className="cart">
-          <Flex direction="column">
-            {/* -----------------------Left side for items added--------------------- */}
-            {/* {cartItems.map((item) => { */}
-            {/* ---------------------------------Dummy item1----------------------------------------- */}
-            <Box>
-              <Flex>
-                <Box>
-                  <Flex direction="column" p={2}>
-                    <Box>
-                      <img
-                        src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/b5/2f/ed.jpg"
-                        alt="image"
-                        width="80%"
-                      />
-                    </Box>
-                    <Box>
-                      <Flex gap={30}>
-                        <Link to="/places/:id">
-                          <Box>Edit</Box>
-                        </Link>
-                        <Box
-                        // onClick={() => removeFromBasket(item.id)}
-                        >
-                          Remove
-                        </Box>
-                      </Flex>
-                    </Box>
-                  </Flex>
-                </Box>
-                <Box>
-                  <Flex direction="column" p={2}>
-                    <Box>
-                      <Heading size="md">
-                        <b>Pune Walking Tour</b>
-                      </Heading>
-                    </Box>
-                    <Box> Pune Walking tour - 9:00</Box>
-                    <Box> Pune Walking tour - 9:00</Box>
-                    <Box>
-                      <Flex gap={10}>
-                        <Box>
-                          2 Adults * <b>₹1743.36</b>
-                        </Box>
-                        <Box>
-                          <b>Total ₹3,486.72</b>
-                        </Box>
-                      </Flex>
-                    </Box>
-                    <br />
-                    <Box>
-                      <Flex>
-                        <Box>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            className="bi bi-phone"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
-                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                          </svg>
-                        </Box>
-                        <Box>Mobile Ticket Accepted</Box>
-                      </Flex>
-                    </Box>
-                  </Flex>
-                </Box>
-              </Flex>
-            </Box>
-            <br />
-            {/* ---------------------------------Dummy item2----------------------------------------- */}
-            {/* <Box>
-                <Flex>
+        {basket?.length <= 0 ? (
+          <Heading>Your Basket is Empty!</Heading>
+        ) : (
+          <Box className="cart">
+            <Flex direction="column">
+              {/* -----------------------Left side for items added--------------------- */}
+              {basket?.map((item) => {
+                totalPrice = totalPrice + 2 * Number(item.price);
+                return (
                   <Box>
-                    <Flex direction="column" p={2}>
+                    <Flex gap="1rem">
                       <Box>
-                        <img
-                          src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/0a/b5/2f/ed.jpg"
-                          alt="image"
-                          width="80%"
-                        />
+                        <Flex direction="column" p={2}>
+                          <Box>
+                            <img
+                              src={item.imageUrl}
+                              alt="image"
+                              width="120px"
+                            />
+                          </Box>
+                          <Box>
+                            <Flex gap={30}>
+                              <Link to="/places/:id">
+                                <Box>Edit</Box>
+                              </Link>
+                              <Box
+                              // onClick={() => removeFromBasket(item.id)}
+                              >
+                                Remove
+                              </Box>
+                            </Flex>
+                          </Box>
+                        </Flex>
                       </Box>
                       <Box>
-                        <Flex gap={30}>
-                          <Box>Edit</Box>
-                          <Box>Remove</Box>
+                        <Flex direction="column" p={2}>
+                          <Box>
+                            <Heading size="md">
+                              <b>{item.title}</b>
+                            </Heading>
+                          </Box>
+
+                          <Box>
+                            <Flex gap={10}>
+                              <Box>
+                                2 Adults * <b>₹{item.price}</b>
+                              </Box>
+                              <Box>
+                                <b>Total ₹{2 * item.price}</b>
+                              </Box>
+                            </Flex>
+                          </Box>
+                          <br />
+                          <Box>
+                            <Flex>
+                              <Box>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  fill="currentColor"
+                                  className="bi bi-phone"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                                  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                              </Box>
+                              <Box>Mobile Ticket Accepted</Box>
+                            </Flex>
+                          </Box>
                         </Flex>
+                      </Box>
+                    </Flex>
+                    <br />
+                    <Divider width="100%" />
+                    <br />
+                  </Box>
+                );
+              })}
+              {/* -----------------------Right side for total amount------------------------ */}
+              <Box p={8} shadow="md" borderWidth="1px" className="review">
+                <Heading as="h2" size="lg" padding="0.75rem">
+                  Review Order Details
+                </Heading>
+                <br />
+                <Flex gap="8rem">
+                  {/* ------------------------------headings-------------------------------- */}
+                  <Box>
+                    <Flex direction="column">
+                      <Box>Booking Fee</Box>
+                      <Box>Subtotal</Box>
+                      <Box>
+                        <b>Total ({basket?.length})</b>
                       </Box>
                     </Flex>
                   </Box>
+                  {/* -------------------------amounts-------------------------------- */}
                   <Box>
-                    <Flex direction="column" p={2}>
-                      <Box>
-                        <Heading size="md">
-                          <b>Pune Walking Tour</b>
-                        </Heading>
-                      </Box>
-                      <Box> Pune Walking tour - 9:00</Box>
-                      <Box> Pune Walking tour - 9:00</Box>
-                      <Box>
-                        <Flex gap={10}>
-                          <Box>
-                            2 Adults * <b>₹1743.36</b>
-                          </Box>
-                          <Box>
-                            <b>Total ₹3,486.72</b>
-                          </Box>
-                        </Flex>
-                        <Divider w="100%" color="gray" />
-                      </Box>
-                      <br />
-                      <Box>
-                        <Flex>
-                          <Box>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              fill="currentColor"
-                              className="bi bi-phone"
-                              viewBox="0 0 16 16"
-                            >
-                              <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
-                              <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                            </svg>
-                          </Box>
-                          <Box>Mobile Ticket Accepted</Box>
-                        </Flex>
-                      </Box>
-                    </Flex>
+                    <Box> ₹0.00</Box>
+                    <Box> ₹{totalPrice}</Box>
+                    <Box>
+                      <b>₹{totalPrice}</b>
+                    </Box>
                   </Box>
                 </Flex>
-                <Divider w="100%" color="gray" />
-              </Box> */}
-            {/* })} */}
-            {/* -----------------------Right side for total amount------------------------ */}
-            <Box p={8} shadow="md" borderWidth="1px" className="review">
-              <Heading as="h2" size="lg" padding="0.75rem">
-                Review Order Details
-              </Heading>
-              <br />
-              <Flex gap="8rem">
-                {/* ------------------------------headings-------------------------------- */}
-                <Box>
-                  <Flex direction="column">
-                    <Box>Booking Fee</Box>
-                    <Box>Subtotal</Box>
-                    <Box>
-                      <b>Total ${}</b>
-                    </Box>
-                  </Flex>
-                </Box>
-                {/* -------------------------amounts-------------------------------- */}
-                <Box>
-                  <Box> ₹0.00</Box>
-                  <Box> ₹ ${}</Box>
-                  <Box>
-                    <b>₹ ${}</b>
-                  </Box>
-                </Box>
-              </Flex>
-              <br />
-              <p style={{ fontSize: "12px", color: "gray" }}>
-                No additional taxes and fees
-              </p>
-              <Button
-                p={7}
-                colorScheme="#f2b203"
-                borderRadius="25px"
-                marginTop="5%"
-                color="black"
-                className="checkout-btn"
-              >
-                Checkout
-              </Button>
-              <br />
-              <Container>
-                <Box padding="5% 0%" textAlign="left">
-                  <b>Reserve Now and Pay Later</b>
-                </Box>
-                <p className="unsure">
-                  Unsure of your plans? You can reserve a spot and pay for it
-                  later. Just click on "Checkout" to see more payment options.
-                  <b>Learn more</b>
+                <br />
+                <p style={{ fontSize: "12px", color: "gray" }}>
+                  No additional taxes and fees
                 </p>
-              </Container>
-            </Box>
-          </Flex>
-        </Box>
-        {/* ) */}
-        {/* } */}
+                <Link to="/checkout">
+                  <Button
+                    p={7}
+                    colorScheme="#f2b203"
+                    borderRadius="25px"
+                    marginTop="5%"
+                    color="black"
+                    className="checkout-btn"
+                  >
+                    Checkout
+                  </Button>
+                </Link>
+                <br />
+                <Container>
+                  <Box padding="5% 0%" textAlign="left">
+                    <b>Reserve Now and Pay Later</b>
+                  </Box>
+                  <p className="unsure">
+                    Unsure of your plans? You can reserve a spot and pay for it
+                    later. Just click on "Checkout" to see more payment options.
+                    <b>Learn more</b>
+                  </p>
+                </Container>
+              </Box>
+            </Flex>
+          </Box>
+        )}
       </Container>
 
       <Box className="bottom">
