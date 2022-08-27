@@ -5,6 +5,7 @@ const initialState = {
   restaurantList: [],
   places: [],
   sight: [],
+  basket: [],
   isLoading: false,
   isError: false,
 };
@@ -56,6 +57,32 @@ const reducer = (state = initialState, { type, payload }) => {
 
     case types.SIGHT_LIST_FAILURE: {
       return { ...state, isLoading: false, isError: true };
+    }
+
+    case types.ADD_TO_BASKET_REQUEST: {
+      return {
+        isLoading: true,
+        isError: false,
+      };
+    }
+    case types.ADD_TO_BASKET_SUCCESS: {
+      return {
+        isLoading: false,
+        isError: false,
+        basket: [...payload],
+      };
+    }
+
+    case types.ADD_TO_BASKET_FAILURE: {
+      return {
+        isLoading: false,
+        isError: true,
+      };
+    }
+    case types.REMOVE_FROM_BASKET: {
+      return {
+        basket: [...payload],
+      };
     }
 
     default:

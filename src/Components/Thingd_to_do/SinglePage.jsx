@@ -5,7 +5,6 @@ import { placesdata } from "../../Redux/AppReducer/action";
 import styles from "./SinglePage.module.css";
 import { IoIosContacts } from "react-icons/io";
 import { Heading, Text } from "@chakra-ui/react";
-import items from "./data.json";
 
 import bnner1 from "./Image/bnner1.jpg";
 import bnner2 from "./Image/bnner2.jpg";
@@ -33,21 +32,6 @@ const SinglePage = () => {
     }
   }, [id, placesData]);
   console.log(placesData);
-
-  //    let temp=[];
-  const Data = items.items;
-  // if(Data.length>0 ){
-  //     for(let i=0;i<Data.length;i++){
-  //         if(id==Data[i].id){
-  //             temp.push(Data[i])
-  //         }
-  //     }
-  // }
-  console.log(Data);
-
-  const AddToBag = () => {
-    localStorage.setItem("Data", JSON.stringify(Data));
-  };
 
   return (
     <>
@@ -90,9 +74,7 @@ const SinglePage = () => {
               from $380.00 per adult (price varies by grouo size)
             </p>
           </div>
-          <button className={styles.press} onClick={AddToBag}>
-            Check availability
-          </button>
+          <button className={styles.press}>Check availability</button>
 
           <Text padding="30px">
             Reserve now & pay later: Save your spot free of charge with flexible
