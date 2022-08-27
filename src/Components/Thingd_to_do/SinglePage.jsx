@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCart, addToCartFailure, addToCartRequest, addToCartSuccess, placesdata } from "../../Redux/AppReducer/action";
+import {
+  addToCartFailure,
+  addToCartRequest,
+  addToCartSuccess,
+  placesdata,
+} from "../../Redux/AppReducer/action";
 import styles from "./SinglePage.module.css";
 import { IoIosContacts } from "react-icons/io";
 import { Heading, Text } from "@chakra-ui/react";
-import axios from 'axios';
+import axios from "axios";
 
 import bnner1 from "./Image/bnner1.jpg";
 import bnner2 from "./Image/bnner2.jpg";
 import bottom from "./Image/bottom.jpg";
+import Navbar from "../Navbar";
 
 const SinglePage = () => {
   const dispatch = useDispatch();
@@ -20,7 +26,7 @@ const SinglePage = () => {
   const [currentData, setCurrentData] = useState({});
 
   useEffect(() => {
-    if (placesData?.length == 0) {
+    if (placesData?.length === 0) {
       dispatch(placesdata());
     }
   }, [dispatch, placesData.length]);
@@ -32,27 +38,27 @@ const SinglePage = () => {
       data && setCurrentData(data);
     }
   }, [id, placesData]);
-  
 
-  const handleCart = () =>{
+  const handleCart = () => {
     // let payload = {
     //   id:currentData.id,
     //   title:currentData.title,
     //   price:currentData.price,
     //   imageUrl:currentData.imageUrl,
-    // } 
-    let payload =placesData.find((item)=>item.id===Number(id));
-    console.log(payload)
+    // }
+    let payload = placesData.find((item) => item.id === Number(id));
+    console.log(payload);
 
-      dispatch(addToCartRequest())
-     axios.post("http://localhost:8080/basket",payload)
-      .then(()=>dispatch(addToCartSuccess()))
-      .catch((e)=>dispatch(addToCartFailure(e)))
-    
-  }
+    dispatch(addToCartRequest());
+    axios
+      .post("http://localhost:8080/basket", payload)
+      .then(() => dispatch(addToCartSuccess()))
+      .catch((e) => dispatch(addToCartFailure(e)));
+  };
 
   return (
     <>
+      <Navbar />
       <div className={styles.head}>
         <div className={styles.single1}>
           <h1 style={{ fontSize: "30px" }}>{currentData.title}</h1>
@@ -92,7 +98,9 @@ const SinglePage = () => {
               from $380.00 per adult (price varies by grouo size)
             </p>
           </div>
-          <button className={styles.press} onClick={handleCart}>Add To Basket</button>
+          <button className={styles.press} onClick={handleCart}>
+            Add To Basket
+          </button>
 
           <Text padding="30px">
             Reserve now & pay later: Save your spot free of charge with flexible

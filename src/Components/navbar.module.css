@@ -1,10 +1,15 @@
 .navbarDiv{
-    width: 70%;
+    width: 73%;
     height:50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
     display: flex;
     position: relative;
+
+    
+
+    margin-top: 1.5%;
+
 }
 
 .logo{
@@ -32,6 +37,7 @@
 }
 .divright2  :hover{
     cursor: pointer;
+    padding: 2%;
     background-color: rgb(207, 207, 207);
     
 }

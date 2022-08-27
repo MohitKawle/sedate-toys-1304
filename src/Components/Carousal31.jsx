@@ -52,14 +52,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Heading, Img } from "@chakra-ui/react";
+import homepage from '../Pages/homepage.module.css'
 
 const Carousal31 =()=>{
     var settings = {
         dots: true,
+        arrow:true,
         infinite: false,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
+        gap:"10px",
         initialSlide: 0,
         responsive: [
           {
@@ -90,60 +93,61 @@ const Carousal31 =()=>{
       };
     
     return (
-      <div style={{margin:"50px"}}>
+      <div style={{margin:"40px"}}>
         
         <Slider {...settings}>
             
           <div>
-            <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/8e/b8/c8/caption.jpg?w=300&h=300&s=1" />
-            <Heading style={{textAlign:"center"}}>Culture Tour</Heading>
+            <Img className={homepage.img2} 
+             src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5f/d6/94/caption.jpg?w=300&h=300&s=1" />
+            <div className={homepage.c_text}>Secrets of Wild India Tour </div>
           </div>
           <div>
-           <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/d2/43/5b/caption.jpg?w=300&h=300&s=1" />
-           <Heading style={{textAlign:"center"}}>City Tour</Heading>
+           <Img className={homepage.img2} 
+           src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5d/c6/ea/caption.jpg?w=300&h=300&s=1" />
+           <div className={homepage.c_text}>Two Night Tiger Safari Experience at 
+            Tadoba National Park &Transfers From Nagpur from $575 per adult
+            </div>
           </div>
           <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/69/a0/9c/dagdusheth-ganpati.jpg?w=300&h=-1&s=1" />
-          <Heading style={{textAlign:"center"}}>Secred & Religious Sites</Heading>
+          <Img className={homepage.img2} 
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1e/09/b0/49/caption.jpg?w=300&h=300&s=1" />
+          <div className={homepage.c_text}>Safari in Pench National Park </div>
           </div>
           <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/d7/76/cb/caption.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Day Trips </Heading>
+          <Img className={homepage.img2} 
+           src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5c/13/c6/caption.jpg?w=300&h=300&s=1" />
+          <div className={homepage.c_text}>Tadoba Tiger Reserve Tour Of India </div>
           </div>
           <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/55/06/72/caption.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Half-day Tours</Heading>
+          <Img className={homepage.img2} 
+           src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/97/f3/2f/caption.jpg?w=300&h=300&s=1" />
+          <div className={homepage.c_text}>Wildlife Safari in Bandhavgarh, Kanha, Pench & Tadoba Andhari National Parks </div>
           </div>
           <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/83/33/57/caption.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Shopping Mals</Heading>
+          <Img className={homepage.img2} 
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/f0/b8/65/caption.jpg?w=300&h=300&s=1" />
+          <div className={homepage.c_text}> </div>
           </div>
           <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/65/8e/2e/caption.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Private Day Trips </Heading>
+          <Img className={homepage.img2} 
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/15/2d/7e/caption.jpg?w=300&h=300&s=1" />
+          <div className={homepage.c_text}>Secrets of Wild India Tour </div>
           </div>
           <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/c3/36/a1/caption.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Dining Exprement</Heading>
+          <Img className={homepage.img2} 
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/f4/4a/2d/caption.jpg?w=300&h=300&s=1" />
+          <div className={homepage.c_text}>Secrets of Wild India Tour </div>
           </div>
           <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/af/8b/07/dam-view.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Dams</Heading>
-          </div>
-          <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/56/72/1b/caption.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Private Sight Seeing Tours</Heading>
-          </div>
-          <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/63/60/30/caption.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Top Pics</Heading>
-          </div>
-          <div>
-          <Img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/10/e1/9d/taljai-mata-mandir.jpg?w=300&h=300&s=1" />
-          <Heading style={{textAlign:"center"}}>Nature & Wildlife Areas</Heading>
+          <Img className={homepage.img2} 
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1e/02/e2/26/caption.jpg?w=300&h=300&s=1" />
+          <div className={homepage.c_text}>Secrets of Wild India Tour </div>
           </div>
          
+         
         </Slider>
+        
       </div>
     );
   }

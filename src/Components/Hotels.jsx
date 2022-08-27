@@ -12,6 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import InnerNav from "./InnerNavbar/InnerNav";
+import Navbar from "./Navbar";
 
 const Hotels = () => {
   let dispatch = useDispatch();
@@ -48,10 +49,11 @@ const Hotels = () => {
     dispatch(getSightList);
   }, [dispatch]);
 
-  console.log(sightList);
+  console.log(sort);
 
   return (
     <>
+      <Navbar />
       <InnerNav />
       <div className={styles.container}>
         <div className={styles.container}>
@@ -63,16 +65,18 @@ const Hotels = () => {
             <div className={styles.calenderDiv}>
               <div className={styles.outerDiv1}>
                 <div className={styles.innerDiv1}>
-                  <input type="date" className={styles.checkIn}/>
+                  <input type="date" className={styles.checkIn} />
                 </div>
               </div>
               <div className={styles.outerDiv2}>
                 <div className={styles.innerDiv2}>
-                <input type="date" className={styles.checkIn}/>
+                  <input type="date" className={styles.checkIn} />
                 </div>
               </div>
               <div className={styles.outerDiv3}>
-                <div className={styles.innerDiv3}></div>
+                <div className={styles.innerDiv3}>
+                    <p>Guest 1room, 2 adults, 0 children</p>
+                </div>
               </div>
             </div>
           </div>
@@ -112,7 +116,7 @@ const Hotels = () => {
                             />
                             <p>₹{hotel.price}</p>
                             <button className={styles.button}>
-                              View Deals
+                             <a href={hotel.href} target="_blank" rel="noreferrer" >View Deals</a> 
                             </button>
                           </div>
                           <div className={styles.bestOptions}></div>

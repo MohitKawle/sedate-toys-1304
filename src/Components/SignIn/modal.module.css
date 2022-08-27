@@ -1,0 +1,82 @@
+.centre{
+    text-align: center;
+}
+.m11{
+    font-size: 28px;
+    font-weight: bolder;
+    margin-left: 50px ;
+    
+}
+.m1G{
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    font-size: 22px;
+    margin-top: 16px;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+}
+.m1o{
+    margin-top: 50px;
+}
+.m1_main{
+    width:80%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.m1_logo{
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.m1_glogo{
+    width: 50px;
+    margin-left: 20px;
+}
+.m1_elogo{
+    width: 30px;
+    margin-left: 20px;
+}
+.small{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 155px;
+}
+
+.eemail{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+.email{
+    border: 1.4px solid black;
+    border-radius: 20px;
+    margin-left: 35px;
+    width: 80%;
+    height: 40px;
+}
+.signin_Button{
+    background-color: black;
+    width: 70%;
+    height: 38px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 10px;
+
+
+
+}
+.small2{
+    font-size: 12px;
+    text-align: center;
+    
+}
+.not_a_member{
+    text-align: center;
+}
