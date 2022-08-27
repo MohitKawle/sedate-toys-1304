@@ -62,10 +62,14 @@ const Hotels = () => {
             </p>
             <div className={styles.calenderDiv}>
               <div className={styles.outerDiv1}>
-                <div className={styles.innerDiv1}></div>
+                <div className={styles.innerDiv1}>
+                  <input type="date" className={styles.checkIn}/>
+                </div>
               </div>
               <div className={styles.outerDiv2}>
-                <div className={styles.innerDiv2}></div>
+                <div className={styles.innerDiv2}>
+                <input type="date" className={styles.checkIn}/>
+                </div>
               </div>
               <div className={styles.outerDiv3}>
                 <div className={styles.innerDiv3}></div>
