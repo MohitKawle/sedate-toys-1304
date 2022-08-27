@@ -3,8 +3,8 @@ import {
   Box,
   Image,
   Text,
-  Link,
   Input,
+  Link,
   InputGroup,
   InputLeftAddon,
   Checkbox,
@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import CircleIcon from "./CircleIcon";
+import { Link as Returning } from "react-router-dom";
 
 const Checkout_page = () => {
   return (
@@ -100,16 +101,17 @@ const Checkout_page = () => {
       ></Box>
 
       {/* back to basket */}
-      <Text
-        fontSize={"13px"}
-        color={"grey"}
-        marginTop={"15px"}
-        marginLeft={"200px"}
-      >
-        {" "}
-        {<ChevronLeftIcon />}
-        <Link to="/">Back to Basket</Link>
-      </Text>
+      <Returning to="/basket">
+        <Text
+          fontSize={"13px"}
+          color={"grey"}
+          marginTop={"15px"}
+          marginLeft={"200px"}
+        >
+          {<ChevronLeftIcon />}
+          Back to Basket
+        </Text>
+      </Returning>
 
       {/* Secure Checkout */}
 
@@ -397,7 +399,7 @@ const Checkout_page = () => {
             <Box padding={"20px"}>
               <Box display={"flex"} gap={"20px"} marginTop={"10px"}>
                 <Box fontSize={"25px"}>
-                  <i class="fa-solid fa-wallet"></i>
+                  <i className="fa-solid fa-wallet"></i>
                 </Box>
                 <Box>
                   <Text fontWeight={"bold"}>Lowest price guarantee</Text>
@@ -408,7 +410,7 @@ const Checkout_page = () => {
               </Box>
               <Box display={"flex"} gap={"20px"} marginTop={"10px"}>
                 <Box fontSize={"25px"}>
-                  <i class="fa-solid fa-lock"></i>
+                  <i className="fa-solid fa-lock"></i>
                 </Box>
                 <Box>
                   <Text fontWeight={"bold"}>Privacy protection</Text>
@@ -419,7 +421,7 @@ const Checkout_page = () => {
               </Box>
               <Box display={"flex"} gap={"20px"} marginTop={"10px"}>
                 <Box fontSize={"25px"}>
-                  <i class="fa-solid fa-headphones"></i>
+                  <i className="fa-solid fa-headphones"></i>
                 </Box>
                 <Box>
                   <Text fontWeight={"bold"}>24/7 global support</Text>
@@ -430,7 +432,7 @@ const Checkout_page = () => {
               </Box>
               <Box display={"flex"} gap={"20px"} marginTop={"10px"}>
                 <Box fontSize={"25px"}>
-                  <i class="fa-solid fa-phone"></i>
+                  <i className="fa-solid fa-phone"></i>
                 </Box>
                 <Box>
                   <Text fontWeight={"bold"}>Give us a call</Text>
