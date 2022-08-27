@@ -5,11 +5,14 @@ import Modal2 from './SignIn/Modal2'
 import DropDown from './SignIn/DropDown'
 
 import navbar from '../Components/navbar.module.css'
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { useDispatch } from 'react-redux/es/exports'
 import { getAuthSucc } from '../Redux/AuthReducer/action'
 
 const Navbar = () => {
+  const basket = useSelector((state) => state.AppReducer.basket);
   const dispatch=useDispatch()
   const [SignIn, SetSignIn] = useState(0)
   const [dropdown_nav, setDropDown_nav] = useState(1)
@@ -56,16 +59,38 @@ const Navbar = () => {
     SetSignIn={SetSignIn} />}
 
     </div>
-        
+    <div className={navbar.flex_logo}>
+            <div className={navbar.logo_img}>
+              <Link to="/basket">
+                <img
+                  fontSize={"20px"}
+                  src="https://th.bing.com/th/id/OIP.RVfkrMpz-2sFbKsxmBFd_wHaGF?pid=ImgDet&w=861&h=708&rs=1"
+                  alt=""
+                />
+              </Link>
+            </div>
+            <Link to="/basket">
+              Basket
+              <span
+                style={{
+                  border: "1px solid red",
+                  borderRadius: "60px",
+                  position: "relative",
+                  bottom: "10px",
+                  right: "5px",
+                  padding: "0px 5px",
+                  backgroundColor: "red",
+                }}
+              >
+                <b style={{ color: "white" }}>{basket?.length}</b>
+              </span>
+            </Link>
+          </div>
 
      
        
        
-        <div className={navbar.flex_logo}>
-          <div className={navbar.logo_img}>
-          <img fontSize={"20px"} src="https://th.bing.com/th/id/OIP.RVfkrMpz-2sFbKsxmBFd_wHaGF?pid=ImgDet&w=861&h=708&rs=1" alt="" />
-          </div>
-          Basket</div>
+        
       </div>
     </div>
 

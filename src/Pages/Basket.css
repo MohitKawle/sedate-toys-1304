@@ -6,7 +6,7 @@
 .review{
     border-radius: 20px;
     position: absolute;
-    margin-left: 55%;
+    margin-left: 58%;
    width: 30%;
 
 }
@@ -26,19 +26,17 @@
     font-size: 14px;
 }
 
-.top{
-/* border: 2px solid black; */
-height: 100vh;
-}
 
 .cart{
     margin: 3% 0%; 
     width: 60%;
+    height: fit-content;
+    /* border: 2px solid red; */
 }
 
 .bottom{
     /* border: 2px solid blue; */
     margin-left: 3%;
     padding: 4%;
-
+    margin-top: 5%;
 }

@@ -5,7 +5,11 @@
     margin: auto;
     display: flex;
     position: relative;
+
     
+
+    margin-top: 1.5%;
+
 }
 
 .logo{
@@ -33,6 +37,7 @@
 }
 .divright2  :hover{
     cursor: pointer;
+    padding: 2%;
     background-color: rgb(207, 207, 207);
     
 }

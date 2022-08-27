@@ -6,10 +6,13 @@ import Carousel31 from '../Components/Carousal31'
 import Carousel32 from '../Components/Carousal32'
 import tAbb1 from "../Components/SignIn/images/tAbb1.jpg"
 import hmid from "../Components/SignIn/images/hmid.jpg"
+import OuterNav from '../Components/OuterNav'
+
 
 const Homepage = () => {
   return (<>
     <Navbar />
+    <OuterNav/>
     <div >
       <div className={homepage.hdiv1}>
         <div className={homepage.search}>
