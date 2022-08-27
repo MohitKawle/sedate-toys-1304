@@ -3,11 +3,13 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import homepage from "./homepage.module.css";
 import Carousel31 from "../Components/Carousal31";
+import OuterNav from "../Components/OuterNav";
 
 const Homepage = () => {
   return (
     <>
       <Navbar />
+      <OuterNav />
       <div>
         <div className={homepage.hdiv1}>
           <div className={homepage.search}>
@@ -31,7 +33,6 @@ const Homepage = () => {
           </div>
           <div>{<Carousel31 />}</div>
         </div>
-
 
         <div>Ways to toor nagpur District</div>
         <div>Get out there</div>
