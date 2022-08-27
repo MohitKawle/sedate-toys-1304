@@ -3,7 +3,7 @@ import { Box, Image, Text,Link, Input, InputGroup, InputLeftAddon, Checkbox, Sta
 import {  ChevronLeftIcon } from '@chakra-ui/icons'
 import CircleIcon from './CircleIcon'
 
-const Checkout_page = () => {
+const CheckoutPage = () => {
   return (
     <Box  >   
         <Image height={{base:"15px",md:"25px",lg:"45px"}} 
@@ -330,6 +330,7 @@ const Checkout_page = () => {
          </Box>
         </Box>
       </Box>
+    
      <Box textAlign={"center"}>
      <Text marginTop={"30px"} 
       marginBottom={"30px"}
@@ -342,4 +343,4 @@ const Checkout_page = () => {
 
 }
 
-export default Checkout_page;
+export  {CheckoutPage};

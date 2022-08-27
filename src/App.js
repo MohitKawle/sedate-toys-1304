@@ -1,4 +1,3 @@
-import Payment_page from "./Components/Aditya/Payment_page";
 import MainRoutes from "./Pages/MainRoutes";
 
 function App() {
