@@ -133,3 +133,25 @@ export const addToBasket = () => (dispatch) => {
       dispatch(addToBasketFailure(e));
     });
 };
+
+
+export const addToCartRequest = () => {
+  return {
+    type: types.ADD_TO_CART_REQUEST,
+  };
+};
+
+export const addToCartSuccess = () => {
+  return {
+    type: types.ADD_TO_CART_SUCCESS,
+    
+  };
+};
+
+export const addToCartFailure = () => {
+  return {
+    type: types.ADD_TO_CART_FAILURE,
+  };
+};
+
+
