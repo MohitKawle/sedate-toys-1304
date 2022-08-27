@@ -37,6 +37,25 @@ export const sightListFailure = () => {
   return { type: types.SIGHT_LIST_FAILURE };
 };
 
+export const addToBasketRequest = () => {
+  return {
+    type: types.ADD_TO_BASKET_REQUEST,
+  };
+};
+
+export const addToBasketSuccess = (payload) => {
+  return {
+    type: types.ADD_TO_BASKET_SUCCESS,
+    payload,
+  };
+};
+
+export const addToBasketFailure = () => {
+  return {
+    type: types.ADD_TO_BASKET_FAILURE,
+  };
+};
+
 export const getHotelList = (dispatch) => {
   dispatch(hotelListRequest());
   return axios
@@ -89,4 +108,28 @@ export const getSightList = (dispatch) => {
       dispatch(sightListSuccess(res.data));
     })
     .catch((err) => dispatch(sightListFailure()));
+};
+
+// export const removeFromBasket = (id) => async (dispatch) => {
+//   const updatedBasket = basket.filter(
+//     (basketItem) => basketItem.id !== id
+//   );
+
+//   dispatch({
+//     type: types.REMOVE_FROM_BASKET,
+//     payload: updatedBasket,
+//   });
+// };
+
+export const addToBasket = () => (dispatch) => {
+  dispatch(addToBasketRequest());
+  return axios
+    .get("http://localhost:8080/basket")
+    .then((res) => {
+      console.log("res:", res.data);
+      return dispatch(addToBasketSuccess(res.data));
+    })
+    .catch((e) => {
+      dispatch(addToBasketFailure(e));
+    });
 };
