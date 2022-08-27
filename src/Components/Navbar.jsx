@@ -1,14 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Signin from '../Pages/Signin'
 import Modal1 from './SignIn/Modal1'
 import Modal2 from './SignIn/Modal2'
 import DropDown from './SignIn/DropDown'
 
 import navbar from '../Components/navbar.module.css'
-const Navbar = () => {
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-  const [SignIn, SetSignIn] = useState(1)
-  const [dropdown_nav, setDropDown_nav] = useState(0)
+import { useDispatch } from 'react-redux/es/exports'
+import { getAuthSucc } from '../Redux/AuthReducer/action'
+
+const Navbar = () => {
+  const basket = useSelector((state) => state.AppReducer.basket);
+  const dispatch=useDispatch()
+  const [SignIn, SetSignIn] = useState(0)
+  const [dropdown_nav, setDropDown_nav] = useState(1)
+  useEffect(()=>{
+    if(dropdown_nav){
+      dispatch(getAuthSucc())
+    }
+    
+  },[dropdown_nav])
   console.log(SignIn)
 
 
@@ -40,17 +53,44 @@ const Navbar = () => {
 
 
 
+    <div>
+    {dropdown_nav ? SignIn ? <Modal2 setDropDown_nav={setDropDown_nav} /> : <Modal1 SetSignIn={SetSignIn} /> : <DropDown 
+    setDropDown_nav={setDropDown_nav}
+    SetSignIn={SetSignIn} />}
 
-        
-
-        {dropdown_nav ? SignIn ? <Modal2 /> : <Modal1 /> : <DropDown />}
-       
-       
-        <div className={navbar.flex_logo}>
-          <div className={navbar.logo_img}>
-          <img fontSize={"20px"} src="https://th.bing.com/th/id/OIP.RVfkrMpz-2sFbKsxmBFd_wHaGF?pid=ImgDet&w=861&h=708&rs=1" alt="" />
+    </div>
+    <div className={navbar.flex_logo}>
+            <div className={navbar.logo_img}>
+              <Link to="/basket">
+                <img
+                  fontSize={"20px"}
+                  src="https://th.bing.com/th/id/OIP.RVfkrMpz-2sFbKsxmBFd_wHaGF?pid=ImgDet&w=861&h=708&rs=1"
+                  alt=""
+                />
+              </Link>
+            </div>
+            <Link to="/basket">
+              Basket
+              <span
+                style={{
+                  border: "1px solid red",
+                  borderRadius: "60px",
+                  position: "relative",
+                  bottom: "10px",
+                  right: "5px",
+                  padding: "0px 5px",
+                  backgroundColor: "red",
+                }}
+              >
+                <b style={{ color: "white" }}>{basket?.length}</b>
+              </span>
+            </Link>
           </div>
-          Basket</div>
+
+     
+       
+       
+        
       </div>
     </div>
 
@@ -61,4 +101,5 @@ const Navbar = () => {
 export default Navbar
 
 {/* <div>{<Signin/>}</div> */ }
+
 
