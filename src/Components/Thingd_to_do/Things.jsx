@@ -89,7 +89,7 @@ const Things = () => {
           <div className={styles.place}>
             {places?.length > 0 &&
               places?.map((el) => (
-                <Link to={`/places/${el.id}`}>
+                <Link to={`/places/${el.id}`} key={el.id} >
                   <PlacesCard key={el.id} item={el} />
                 </Link>
               ))}
