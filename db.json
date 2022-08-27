@@ -568,5 +568,11 @@
     }
   ],
   "basket": [
+    {
+      "id": 2,
+      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/63/60/30/caption.jpg?w=300&h=300&s=1",
+      "title": "Singhagad-Panshet-Lavasa Trip (Guided Full Day Sightseeing Tour)",
+      "price": "128"
+    }
   ]
 }
