@@ -1,10 +1,11 @@
 .navbarDiv{
-    width: 70%;
+    width: 73%;
     height:50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
     display: flex;
     position: relative;
+    
 }
 
 .logo{

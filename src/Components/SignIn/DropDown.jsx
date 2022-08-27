@@ -12,7 +12,7 @@ import {
   } from '@chakra-ui/react'
   import navbar from '../navbar.module.css'
 
-const DropDown = () => {
+const DropDown = ({SetSignIn,setDropDown_nav}) => {
   return (
     <Menu>
     <MenuButton as={Button} backgroundColor='white'  >
@@ -24,7 +24,7 @@ const DropDown = () => {
       <MenuItem>View</MenuItem>
       <MenuItem>Booking</MenuItem>
       <MenuItem>Account info</MenuItem>
-      <MenuItem>Sign out</MenuItem>
+      <MenuItem onClick={()=>{setDropDown_nav(1);SetSignIn(0)}}>Sign out</MenuItem>
       
     </MenuList>
   </Menu>

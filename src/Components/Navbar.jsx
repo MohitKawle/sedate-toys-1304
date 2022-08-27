@@ -1,14 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Signin from '../Pages/Signin'
 import Modal1 from './SignIn/Modal1'
 import Modal2 from './SignIn/Modal2'
 import DropDown from './SignIn/DropDown'
 
 import navbar from '../Components/navbar.module.css'
-const Navbar = () => {
 
-  const [SignIn, SetSignIn] = useState(1)
-  const [dropdown_nav, setDropDown_nav] = useState(0)
+import { useDispatch } from 'react-redux/es/exports'
+import { getAuthSucc } from '../Redux/AuthReducer/action'
+
+const Navbar = () => {
+  const dispatch=useDispatch()
+  const [SignIn, SetSignIn] = useState(0)
+  const [dropdown_nav, setDropDown_nav] = useState(1)
+  useEffect(()=>{
+    if(dropdown_nav){
+      dispatch(getAuthSucc())
+    }
+    
+  },[dropdown_nav])
   console.log(SignIn)
 
 
@@ -40,10 +50,15 @@ const Navbar = () => {
 
 
 
+    <div>
+    {dropdown_nav ? SignIn ? <Modal2 setDropDown_nav={setDropDown_nav} /> : <Modal1 SetSignIn={SetSignIn} /> : <DropDown 
+    setDropDown_nav={setDropDown_nav}
+    SetSignIn={SetSignIn} />}
 
+    </div>
         
 
-        {dropdown_nav ? SignIn ? <Modal2 /> : <Modal1 /> : <DropDown />}
+     
        
        
         <div className={navbar.flex_logo}>
@@ -61,4 +76,5 @@ const Navbar = () => {
 export default Navbar
 
 {/* <div>{<Signin/>}</div> */ }
+
 
