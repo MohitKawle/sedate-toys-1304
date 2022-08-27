@@ -4,7 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CircleIcon from './CircleIcon'
 
-const Payment_page = () => {
+const PaymentPage = () => {
   return (
     <Box>
          <Image height={{base:"15px",md:"25px",lg:"45px"}} 
@@ -176,4 +176,4 @@ const Payment_page = () => {
   )
 }
 
-export default Payment_page;
+export  {PaymentPage};

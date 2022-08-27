@@ -20,7 +20,7 @@ import { ChevronLeftIcon } from "@chakra-ui/icons";
 import CircleIcon from "./CircleIcon";
 import { Link as Returning } from "react-router-dom";
 
-const Checkout_page = () => {
+const CheckoutPage = () => {
   return (
     <Box>
       <Image
@@ -464,4 +464,4 @@ const Checkout_page = () => {
   );
 };
 
-export default Checkout_page;
+export  {CheckoutPage};
