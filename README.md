@@ -9,11 +9,11 @@
 
 #### This project is created in a week by a team of five members -
 
-    - Mohit Kawle [fp01_138]
-    - Shaik Shakeer [fw14_165]
-    - Somyakant Mohapatra [fw17_0599]
-    - Pragati Tripathi [fw17_0323]
-    - Aditya Sudhakar Muthal [fw17_0265]
+    - Mohit Kawle
+    - Shaik Shakeer 
+    - Somyakant Mohapatra
+    - Pragati Tripathi 
+    - Aditya Sudhakar Muthal 
 
 ## Tech Stack
 
