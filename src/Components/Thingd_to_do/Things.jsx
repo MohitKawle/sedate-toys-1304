@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import PlacesCard from "./PlacesCard";
 import InnerNav from "../InnerNavbar/InnerNav";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Things = () => {
   const dispatch = useDispatch();
@@ -127,6 +128,7 @@ const Things = () => {
         <br />
         <Review />
       </div>
+      <Footer />
     </>
   );
 };

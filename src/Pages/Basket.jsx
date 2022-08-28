@@ -81,7 +81,9 @@ const Basket = () => {
                               onClick={() => removingFromBasket(item.id)}
                               _hover={{ cursor: "pointer" }}
                             >
-                              <u>Remove</u>
+                              <b>
+                                <u style={{ color: "red" }}>Remove</u>
+                              </b>
                             </Box>
                           </Box>
                         </Flex>

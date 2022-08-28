@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import InnerNav from "./InnerNavbar/InnerNav";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Hotels = () => {
   let dispatch = useDispatch();
@@ -342,6 +343,7 @@ const Hotels = () => {
           </Accordion>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

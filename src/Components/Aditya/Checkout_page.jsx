@@ -39,13 +39,15 @@ const CheckoutPage = () => {
 
   return (
     <Box>
-      <Image
-        height={{ base: "15px", md: "25px", lg: "45px" }}
-        marginLeft={{ base: "50px", md: "150px", lg: "200px" }}
-        marginTop={{ base: "30px", md: "40px", lg: "50px" }}
-        src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
-        alt="logo"
-      />
+      <Returning to="/">
+        <Image
+          height={{ base: "15px", md: "25px", lg: "45px" }}
+          marginLeft={{ base: "50px", md: "150px", lg: "200px" }}
+          marginTop={{ base: "30px", md: "40px", lg: "50px" }}
+          src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+          alt="logo"
+        />
+      </Returning>
       <Box display={"flex"} gap="20px">
         <Box marginLeft={{ base: "100px", md: "200px", lg: "400px" }}>
           <Box

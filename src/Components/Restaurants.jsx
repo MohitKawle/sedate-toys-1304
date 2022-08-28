@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import InnerNav from "./InnerNavbar/InnerNav";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Restaurants = () => {
   let dispatch = useDispatch();
@@ -199,6 +200,7 @@ const Restaurants = () => {
           </Accordion>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
