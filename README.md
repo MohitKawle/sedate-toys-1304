@@ -37,10 +37,10 @@
 
 ## Pages and Responsibiliteies
 
-- Homepage and SignUp/SignIn pages : Mohit Kawle
-- Things to do and Single Item pages : Shaik Shakeer
-- Hotels and Restaurants pages : Somyakant Mohapatra
-- Navbars and Basket pages : Pragati Tripathi
-- Checkout and Payment pages : Aditya Sudhakar Muthal
+- Homepage and SignUp/SignIn pages : _Mohit Kawle_
+- Things to do and Single Item pages : _Shaik Shakeer_
+- Hotels and Restaurants pages : _Somyakant Mohapatra_
+- Navbars and Basket pages : _Pragati Tripathi_
+- Checkout and Payment pages : _Aditya Sudhakar Muthal_
 
         Project code : sedate-toys-1304
