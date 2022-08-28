@@ -38,7 +38,7 @@
     </a>
 </p>
 
-## Pages and Responsibiliteies
+## Pages and Responsibilities
 
 - Homepage and SignUp/SignIn pages : _Mohit Kawle_
 - Things to do and Single Item pages : _Shaik Shakeer_
