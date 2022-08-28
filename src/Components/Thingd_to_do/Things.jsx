@@ -52,7 +52,8 @@ const Things = () => {
               lineHeight: "50px",
               marginTop: "50px",
               color: "black",
-            }}>
+            }}
+          >
             Places to Visit in Pune
           </p>
           <button

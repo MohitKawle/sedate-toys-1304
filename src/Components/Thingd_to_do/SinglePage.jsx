@@ -54,6 +54,8 @@ const SinglePage = () => {
       .post("http://localhost:8080/basket", payload)
       .then(() => dispatch(addToCartSuccess()))
       .catch((e) => dispatch(addToCartFailure(e)));
+    alert("Item added to Cart");
+    window.location.reload();
   };
 
   return (
@@ -99,7 +101,7 @@ const SinglePage = () => {
             </p>
           </div>
           <button className={styles.press} onClick={handleCart}>
-            Add To Basket
+            <b>Add To Basket</b>
           </button>
 
           <Text padding="30px">

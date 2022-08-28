@@ -23,19 +23,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToBasket } from "../../Redux/AppReducer/action";
 
 const CheckoutPage = () => {
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
   const Checkout = useSelector((state) => state.AppReducer.basket);
   // console.log(Checkout)
- 
-useEffect(() => {
+
+  useEffect(() => {
     dispatch(addToBasket());
   }, [dispatch]);
 
-const navigate=useNavigate();
+  const navigate = useNavigate();
 
-function NextToPayment(){
-  navigate("/payment")
-}
+  function NextToPayment() {
+    navigate("/payment");
+  }
 
   return (
     <Box>
@@ -323,90 +323,85 @@ function NextToPayment(){
           // border={"1px solid red"}
           marginTop={"25px"}
         >
-
           <Box
             boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
             borderRadius={"5px"}
           >
-               {
-                Checkout?.length >0 && Checkout.map((item)=>{
-                  return(
+            {Checkout?.length > 0 &&
+              Checkout.map((item) => {
+                return (
                   <div key={item.id}>
-                  <Box  >
-                  <Text 
-                    fontSize={"24px"}
-                    fontWeight={"700"}
-                    paddingTop={"20px"}
-                    marginLeft={"15px"}
-                  >
-                    Review Order Details
-                  </Text>
-                </Box>
-                <Box display={"flex"}>
-               
-                  <Box padding={"20px"}>
-                    <Image
-                      height={"100px"}
-                      width={"200px"}
-                      src={item.imageUrl}
-                      alt="order_details"
-                    />
-                  </Box>
-                  <Box padding={"10px"}>
-                    <Text fontSize={"15px"} fontWeight={"bold"}>
-                      {" "}
-                      {item.title}
-                    </Text>
+                    <Box>
+                      <Text
+                        fontSize={"24px"}
+                        fontWeight={"700"}
+                        paddingTop={"20px"}
+                        marginLeft={"15px"}
+                      >
+                        Review Order Details
+                      </Text>
+                    </Box>
                     <Box display={"flex"}>
-                      <HStack gap={"-10px"}>
-                        <CircleIcon />
-                        <CircleIcon />
-                        <CircleIcon />
-                        <CircleIcon />
-                      </HStack>
-                      <Text fontSize={"13px"}>(101 reviews)</Text>
+                      <Box padding={"20px"}>
+                        <Image
+                          height={"100px"}
+                          width={"200px"}
+                          src={item.imageUrl}
+                          alt="order_details"
+                        />
+                      </Box>
+                      <Box padding={"10px"}>
+                        <Text fontSize={"15px"} fontWeight={"bold"}>
+                          {" "}
+                          {item.title}
+                        </Text>
+                        <Box display={"flex"}>
+                          <HStack gap={"-10px"}>
+                            <CircleIcon />
+                            <CircleIcon />
+                            <CircleIcon />
+                            <CircleIcon />
+                          </HStack>
+                          <Text fontSize={"13px"}>(101 reviews)</Text>
+                        </Box>
+                        <Box fontSize={"13px"}>
+                          <Text>City Tour in 6 Seater</Text>
+                          <Text>Vehicle - 09:00</Text>
+                          <Text>Saturday, 27 August, 2022</Text>
+                          <Text>2 Adults</Text>
+                          <Text>Non-refundable</Text>
+                        </Box>
+                      </Box>
                     </Box>
-                    <Box fontSize={"13px"}>
-                      <Text>City Tour in 6 Seater</Text>
-                      <Text>Vehicle - 09:00</Text>
-                      <Text>Saturday, 27 August, 2022</Text>
-                      <Text>2 Adults</Text>
-                      <Text>Non-refundable</Text>
+                    <Box>
+                      <Box
+                        display={"flex"}
+                        justifyContent={"space-around"}
+                        fontSize={"13px"}
+                      >
+                        <Text>Booking Fee {<Icon />}</Text>
+                        <Text>₹0.00</Text>
+                      </Box>
+                      <Box
+                        display={"flex"}
+                        justifyContent={"space-around"}
+                        fontSize={"13px"}
+                      >
+                        <Text>Subtotal:</Text>
+                        <Text>₹{item.price}</Text>
+                      </Box>
+                      <Box
+                        fontWeight={"bold"}
+                        display={"flex"}
+                        justifyContent={"space-around"}
+                      >
+                        <Text>Total:</Text>
+                        <Text>₹{item.price}</Text>
+                      </Box>
                     </Box>
-                  </Box>
-                </Box>
-                <Box>
-                  <Box
-                    display={"flex"}
-                    justifyContent={"space-around"}
-                    fontSize={"13px"}
-                  >
-                    <Text>Booking Fee {<Icon />}</Text>
-                    <Text>₹0.00</Text>
-                  </Box>
-                  <Box
-                    display={"flex"}
-                    justifyContent={"space-around"}
-                    fontSize={"13px"}
-                  >
-                    <Text>Subtotal:</Text>
-                    <Text>₹{item.price}</Text>
-                  </Box>
-                  <Box
-                    fontWeight={"bold"}
-                    display={"flex"}
-                    justifyContent={"space-around"}
-                  >
-                    <Text>Total:</Text>
-                    <Text>₹{item.price}</Text>
-                  </Box>
-                </Box>
-                </div>
-                  )
-                })
-                
-              }
-            
+                  </div>
+                );
+              })}
           </Box>
 
           {/* Book with confidence started */}
@@ -479,20 +474,21 @@ function NextToPayment(){
         </Box>
       </Box>
 
-    
-     <Box textAlign={"center"}>
-     <Text marginTop={"30px"} 
-      marginBottom={"30px"}
-      fontSize={"12px"}
-      color={"grey"}
-      textAlign={"center"}
-      >© 2022 TripAdvisor LLC All rights reserved. Tripadvisor <Link color={"#188ead"}>Terms of Use</Link> and <Link color={"#188ead"} >Privacy Policy</Link>.</Text>
-     </Box>
-
+      <Box textAlign={"center"}>
+        <Text
+          marginTop={"30px"}
+          marginBottom={"30px"}
+          fontSize={"12px"}
+          color={"grey"}
+          textAlign={"center"}
+        >
+          © 2022 TripAdvisor LLC All rights reserved. Tripadvisor{" "}
+          <Link color={"#188ead"}>Terms of Use</Link> and{" "}
+          <Link color={"#188ead"}>Privacy Policy</Link>.
+        </Text>
+      </Box>
     </Box>
   );
 };
 
-
-export  {CheckoutPage};
-
+export { CheckoutPage };
