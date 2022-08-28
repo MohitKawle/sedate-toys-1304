@@ -14,6 +14,8 @@
 }
 .divright2{
     display: flex;
+    justify-content: center;
+    gap: 10px;
     text-align: right;
     margin-left: auto;
 }
@@ -55,4 +57,7 @@
 }
 .flex_logo{
     display: flex;
+}
+#login{
+    margin-right: 5%;
 }

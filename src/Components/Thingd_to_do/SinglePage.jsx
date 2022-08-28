@@ -17,6 +17,7 @@ import bnner2 from "./Image/bnner2.jpg";
 import bottom from "./Image/bottom.jpg";
 import Navbar from "../Navbar";
 import InnerNav from "../InnerNavbar/InnerNav";
+import Footer from "../Footer";
 
 const SinglePage = () => {
   const dispatch = useDispatch();
@@ -355,6 +356,7 @@ const SinglePage = () => {
           alt=""
         />
       </div>
+      <Footer/>
     </>
   );
 };
