@@ -329,11 +329,7 @@ const CheckoutPage = () => {
             boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
             borderRadius={"5px"}
           >
-            {Checkout?.length > 0 &&
-              Checkout.map((item) => {
-                return (
-                  <div key={item.id}>
-                    <Box>
+               <Box>
                       <Text
                         fontSize={"24px"}
                         fontWeight={"700"}
@@ -343,6 +339,11 @@ const CheckoutPage = () => {
                         Review Order Details
                       </Text>
                     </Box>
+            {Checkout?.length > 0 &&
+              Checkout.map((item) => {
+                return (
+                  <div key={item.id}>
+                 
                     <Box display={"flex"}>
                       <Box padding={"20px"}>
                         <Image
@@ -390,7 +391,7 @@ const CheckoutPage = () => {
                         fontSize={"13px"}
                       >
                         <Text>Subtotal:</Text>
-                        <Text>₹{item.price}</Text>
+                        <Text>₹{2*item.price}</Text>
                       </Box>
                       <Box
                         fontWeight={"bold"}
@@ -398,9 +399,10 @@ const CheckoutPage = () => {
                         justifyContent={"space-around"}
                       >
                         <Text>Total:</Text>
-                        <Text>₹{item.price}</Text>
+                        <Text>₹{2*item.price}</Text>
                       </Box>
                     </Box>
+                    <hr width="100%" color="gray" style={{textAlign:"center",paddingTop:"2px",paddingBottom:"2px"}} />
                   </div>
                 );
               })}

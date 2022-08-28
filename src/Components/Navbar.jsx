@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 
 import { useDispatch } from "react-redux/es/exports";
 import { getAuthSucc } from "../Redux/AuthReducer/action";
+import { StylesProvider } from "@chakra-ui/react";
 
 const Navbar = () => {
   const basket = useSelector((state) => state.AppReducer.basket);
@@ -55,7 +56,7 @@ const Navbar = () => {
             </div>
             Trips
           </div>
-          <div className={navbar.flex_logo}>
+          <div className={navbar.flex_logo} id={navbar.login}>
             <div className={navbar.logo_img}>
               <img
                 src="https://image.freepik.com/free-icon/small-bell_318-10933.jpg"

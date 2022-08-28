@@ -1,7 +1,6 @@
 import { ChevronRightIcon, Icon, InfoIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Button,
   Checkbox,
   Divider,
   HStack,
@@ -313,20 +312,21 @@ const PaymentPage = () => {
             borderRadius={"5px"}
             padding={"10px"}
           >
+            <Box>
+              <Text
+                fontSize={"24px"}
+                fontWeight={"700"}
+                paddingTop={"20px"}
+                marginLeft={"15px"}
+              >
+                Review Order Details
+              </Text>
+            </Box>
             {Payment?.length > 0 &&
               Payment.map((item) => {
                 return (
                   <div key={item.id}>
-                    <Box>
-                      <Text
-                        fontSize={"24px"}
-                        fontWeight={"700"}
-                        paddingTop={"20px"}
-                        marginLeft={"15px"}
-                      >
-                        Review Order Details
-                      </Text>
-                    </Box>
+
                     <Box display={"flex"}>
                       <Box padding={"20px"}>
                         <Image
@@ -374,7 +374,7 @@ const PaymentPage = () => {
                         fontSize={"13px"}
                       >
                         <Text>Subtotal:</Text>
-                        <Text>₹{item.price}</Text>
+                        <Text>₹{2 * item.price}</Text>
                       </Box>
                       <Box
                         fontWeight={"bold"}
@@ -382,9 +382,10 @@ const PaymentPage = () => {
                         justifyContent={"space-around"}
                       >
                         <Text>Total:</Text>
-                        <Text>₹{item.price}</Text>
+                        <Text>₹{2 * item.price}</Text>
                       </Box>
                     </Box>
+                    <hr width="100%" color="gray" style={{textAlign:"center",paddingTop:"2px",paddingBottom:"2px"}} />
                   </div>
                 );
               })}
