@@ -26,13 +26,15 @@ const Navbar = () => {
   return (
     <>
       <div className={navbar.navbarDiv}>
-        <div>
-          <img
-            className={navbar.logo}
-            src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
-            alt=""
-          />
-        </div>
+        <Link to="/">
+          <div>
+            <img
+              className={navbar.logo}
+              src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+              alt=""
+            />
+          </div>
+        </Link>
         <div className={navbar.divright2}>
           <div className={navbar.flex_logo}>
             <div className={navbar.logo_img}>

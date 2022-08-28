@@ -13,6 +13,7 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket, removeFromBasket } from "../Redux/AppReducer/action";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Basket = () => {
   const dispatch = useDispatch();
@@ -306,6 +307,7 @@ const Basket = () => {
           </Flex>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 };

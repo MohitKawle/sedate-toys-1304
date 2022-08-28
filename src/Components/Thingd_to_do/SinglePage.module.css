@@ -3,22 +3,26 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 30px;
+    margin-left: 15px;
 }
 .single2{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width:400px;
     height:500px;
+    padding: 1.5%;
 }
 .single2a{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
+
 }
 .single2a>input{
     border: 1px solid gray;
     border-radius: 10px;
     width:200px;
     height:50px;
+    padding: 1%;
 }
 .single2b{
     display:flex;
