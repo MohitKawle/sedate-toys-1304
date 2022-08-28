@@ -531,50 +531,52 @@
       "id": 1,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/56/72/1b/caption.jpg?w=300&h=300&s=1",
       "title": "Tajmahal journey Airport taxi ",
-      "price": "380"
+      "price": "1780"
     },
     {
       "id": 2,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/63/60/30/caption.jpg?w=300&h=300&s=1",
       "title": "Singhagad-Panshet-Lavasa Trip (Guided Full Day Sightseeing Tour)",
-      "price": "128"
+      "price": "1928"
     },
     {
       "id": 3,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/80/20/35/caption.jpg?w=300&h=300&s=1",
       "title": "Pune to Lonavala Monsoon Drive in Private Vehicle",
-      "price": "250"
+      "price": "2250"
     },
     {
       "id": 4,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/8e/44/da/caption.jpg?w=300&h=300&s=1",
       "title": "Pune Walking Tour with a Punekar",
-      "price": "21"
+      "price": "3521"
     },
     {
       "id": 5,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/80/25/43/caption.jpg?w=300&h=300&s=1",
       "title": "Mumbai to Lonavala Monsoon Drive in Private Vehicle",
-      "price": "80"
+      "price": "2880"
     },
     {
       "id": 6,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/66/23/ab/caption.jpg?w=300&h=300&s=1",
       "title": "Guided Highlights of Pune Car Tour with a local (4 Hrs Sightseeing in AC Car)",
-      "price": "100"
+      "price": "1090"
     },
     {
       "id": 7,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/d7/76/cb/caption.jpg?w=300&h=300&s=1",
       "title": "Guided Highlights of Pune Car Tour with a local (4 Hrs Sightseeing in AC Car)",
-      "price": "100"
+      "price": "1830"
     },
     {
       "id": 8,
       "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4b/26/cd/caption.jpg?w=300&h=300&s=1",
       "title": "Lohagad Fort Trek day excursion From Mumbai",
-      "price": "100"
+      "price": "2760"
     }
   ],
+
   "basket": []
+
 }

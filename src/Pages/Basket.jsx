@@ -13,12 +13,13 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket, removeFromBasket } from "../Redux/AppReducer/action";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Basket = () => {
   const dispatch = useDispatch();
   const basket = useSelector((state) => state.AppReducer.basket);
   let totalPrice = 0;
-  console.log(basket)
+  console.log(basket);
 
   useEffect(() => {
     dispatch(addToBasket());
@@ -59,7 +60,7 @@ const Basket = () => {
           </Flex>
         </Link>
         {/* -----------------------------Main Cart------------------------------ */}
-        {basket?.length == 0 ? (
+        {basket?.length === 0 ? (
           <Heading>Your Basket is Empty!</Heading>
         ) : (
           <Box className="cart">
@@ -73,18 +74,16 @@ const Basket = () => {
                       <Box>
                         <Flex direction="column" p={2}>
                           <Box>
-                            <img
-                              src={item.imageUrl}
-                              alt="img"
-                              width="120px"
-                            />
+                            <img src={item.imageUrl} alt="img" width="120px" />
                           </Box>
                           <Box>
                             <Box
                               onClick={() => removingFromBasket(item.id)}
                               _hover={{ cursor: "pointer" }}
                             >
-                              <u>Remove</u>
+                              <b>
+                                <u style={{ color: "red" }}>Remove</u>
+                              </b>
                             </Box>
                           </Box>
                         </Flex>
@@ -310,6 +309,7 @@ const Basket = () => {
           </Flex>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 };

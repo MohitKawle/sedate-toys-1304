@@ -16,6 +16,7 @@ import bnner1 from "./Image/bnner1.jpg";
 import bnner2 from "./Image/bnner2.jpg";
 import bottom from "./Image/bottom.jpg";
 import Navbar from "../Navbar";
+import InnerNav from "../InnerNavbar/InnerNav";
 
 const SinglePage = () => {
   const dispatch = useDispatch();
@@ -54,11 +55,14 @@ const SinglePage = () => {
       .post("http://localhost:8080/basket", payload)
       .then(() => dispatch(addToCartSuccess()))
       .catch((e) => dispatch(addToCartFailure(e)));
+    alert("Item added to Basket");
+    window.location.reload();
   };
 
   return (
     <>
       <Navbar />
+      <InnerNav />
       <div className={styles.head}>
         <div className={styles.single1}>
           <h1 style={{ fontSize: "30px" }}>{currentData.title}</h1>
@@ -69,7 +73,7 @@ const SinglePage = () => {
           </div>
           <div>
             <img
-              style={{ width: "900px", height: "600px" }}
+              style={{ width: "800px", height: "600px", marginLeft: "1.5%" }}
               src={currentData.imageUrl}
               alt={currentData.name}
             />
@@ -99,17 +103,18 @@ const SinglePage = () => {
             </p>
           </div>
           <button className={styles.press} onClick={handleCart}>
-            Add To Basket
+            <b>Add To Basket</b>
           </button>
 
           <Text padding="30px">
             Reserve now & pay later: Save your spot free of charge with flexible
             booking. Learn more
           </Text>
+          <p>Add more places to visit</p>
           <Text padding="30px">Free cancellation</Text>
         </div>
       </div>
-      <div style={{ marginTop: "50px" }}>
+      <div style={{ marginTop: "50px", padding: "1.5%" }}>
         <Heading>About</Heading>
         <div className={styles.about}>
           <div className={styles.abt1}>
@@ -200,7 +205,9 @@ const SinglePage = () => {
               border: "1px solid black",
             }}
           >
-            <p style={{ fontSize: "18px" }}>View more information</p>
+            <p style={{ fontSize: "18px", padding: "3.5%" }}>
+              View more information
+            </p>
           </button>
 
           <h4
@@ -208,6 +215,7 @@ const SinglePage = () => {
               textAlign: "left",
               fontSize: "26px",
               fontWeight: "600",
+
               // marginLeft: "15px",
             }}
           >
@@ -254,7 +262,7 @@ const SinglePage = () => {
               margin: "10px",
             }}
           >
-            <p style={{ fontSize: "18px" }}>View details</p>
+            <p style={{ fontSize: "18px", padding: "3.5%" }}>View details</p>
           </button>
 
           <br />

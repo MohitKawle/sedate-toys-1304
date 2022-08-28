@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import PlacesCard from "./PlacesCard";
 import InnerNav from "../InnerNavbar/InnerNav";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Things = () => {
   const dispatch = useDispatch();
@@ -52,7 +53,8 @@ const Things = () => {
               lineHeight: "50px",
               marginTop: "50px",
               color: "black",
-            }}>
+            }}
+          >
             Places to Visit in Pune
           </p>
           <button
@@ -126,6 +128,7 @@ const Things = () => {
         <br />
         <Review />
       </div>
+      <Footer />
     </>
   );
 };

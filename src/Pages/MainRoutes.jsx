@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./Homepage";
@@ -7,8 +6,8 @@ import SinglePage from "../Components/Thingd_to_do/SinglePage";
 import Things from "../Components/Thingd_to_do/Things";
 import { Restaurants } from "../Components/Restaurants";
 import Basket from "./Basket";
-import {CheckoutPage} from "../Components/Aditya/Checkout_page";
-import {PaymentPage} from "../Components/Aditya/Payment_page";
+import { CheckoutPage } from "../Components/Aditya/Checkout_page";
+import { PaymentPage } from "../Components/Aditya/Payment_page";
 
 const MainRoutes = () => {
   return (
@@ -26,6 +25,5 @@ const MainRoutes = () => {
     </>
   );
 };
-
 
 export default MainRoutes;
