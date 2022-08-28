@@ -18,7 +18,7 @@ const Basket = () => {
   const dispatch = useDispatch();
   const basket = useSelector((state) => state.AppReducer.basket);
   let totalPrice = 0;
-  console.log(basket)
+  console.log(basket);
 
   useEffect(() => {
     dispatch(addToBasket());
@@ -59,7 +59,7 @@ const Basket = () => {
           </Flex>
         </Link>
         {/* -----------------------------Main Cart------------------------------ */}
-        {basket?.length == 0 ? (
+        {basket?.length === 0 ? (
           <Heading>Your Basket is Empty!</Heading>
         ) : (
           <Box className="cart">
@@ -73,11 +73,7 @@ const Basket = () => {
                       <Box>
                         <Flex direction="column" p={2}>
                           <Box>
-                            <img
-                              src={item.imageUrl}
-                              alt="img"
-                              width="120px"
-                            />
+                            <img src={item.imageUrl} alt="img" width="120px" />
                           </Box>
                           <Box>
                             <Box
