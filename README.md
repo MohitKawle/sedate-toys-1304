@@ -1,4 +1,4 @@
-# <img src="https://th.bing.com/th/id/R.64edfb9d4a014a1cf69bb5422b2fcf18?rik=fgVkeYAUY7F4ZQ&riu=http%3a%2f%2flogok.org%2fwp-content%2fuploads%2f2020%2f01%2fTripadvisor-logo-2020.png&ehk=s1QmUSntYCN1Uuud5tlrunHm%2b9Waq2DzVHRDMLVBhSM%3d&risl=&pid=ImgRaw&r=0" width="5%"/> **Tripadvisor Clone** _(Group Project)_
+# <img src="https://th.bing.com/th/id/R.64edfb9d4a014a1cf69bb5422b2fcf18?rik=fgVkeYAUY7F4ZQ&riu=http%3a%2f%2flogok.org%2fwp-content%2fuploads%2f2020%2f01%2fTripadvisor-logo-2020.png&ehk=s1QmUSntYCN1Uuud5tlrunHm%2b9Waq2DzVHRDMLVBhSM%3d&risl=&pid=ImgRaw&r=0" width="8%"/> **Tripadvisor Clone** _(Group Project)_
 
 #### Tripadvisor, Inc. is an American online travel company that offers online hotel reservations and bookings for transportation, lodging, travel experiences, and restaurants.
 
@@ -43,7 +43,7 @@
 - Homepage and SignUp/SignIn pages : _Mohit Kawle_
 - Things to do and Single Item pages : _Shaik Shakeer_
 - Hotels and Restaurants pages : _Somyakant Mohapatra_
-- Navbars and Basket pages : _Pragati Tripathi_
+- Navbars and Basket page : _Pragati Tripathi_
 - Checkout and Payment pages : _Aditya Sudhakar Muthal_
 
         Project code : sedate-toys-1304
