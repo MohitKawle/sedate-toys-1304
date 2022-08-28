@@ -34,7 +34,7 @@
         <img src="https://img.icons8.com/color/48/000000/javascript.png"/> 
     </a>
    <a href="https://chakra-ui.com/getting-started" target="_blank"> 
-        <img src="https://img.icons8.com/color/344/chakra-ui.png" width="5%"/> 
+        <img src="https://img.icons8.com/color/344/chakra-ui.png" width="6%"/> 
     </a>
 </p>
 
