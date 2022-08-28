@@ -142,8 +142,6 @@ export const addToBasket = () => (dispatch) => {
     });
 };
 
-
-
 export const addToCartRequest = () => {
   return {
     type: types.ADD_TO_CART_REQUEST,
@@ -153,7 +151,6 @@ export const addToCartRequest = () => {
 export const addToCartSuccess = () => {
   return {
     type: types.ADD_TO_CART_SUCCESS,
-    
   };
 };
 
@@ -162,8 +159,6 @@ export const addToCartFailure = () => {
     type: types.ADD_TO_CART_FAILURE,
   };
 };
-
-
 
 export const removeFromBasket = (id) => (dispatch) => {
   dispatch(removeFromBasketRequest());
@@ -176,4 +171,3 @@ export const removeFromBasket = (id) => (dispatch) => {
       dispatch(removeFromBasketFailure(e));
     });
 };
-

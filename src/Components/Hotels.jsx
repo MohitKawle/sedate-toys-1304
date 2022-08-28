@@ -75,7 +75,7 @@ const Hotels = () => {
               </div>
               <div className={styles.outerDiv3}>
                 <div className={styles.innerDiv3}>
-                    <p>Guest 1room, 2 adults, 0 children</p>
+                  <p>Guest 1room, 2 adults, 0 children</p>
                 </div>
               </div>
             </div>
@@ -116,7 +116,13 @@ const Hotels = () => {
                             />
                             <p>₹{hotel.price}</p>
                             <button className={styles.button}>
-                             <a href={hotel.href} target="_blank" rel="noreferrer" >View Deals</a> 
+                              <a
+                                href={hotel.href}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                View Deals
+                              </a>
                             </button>
                           </div>
                           <div className={styles.bestOptions}></div>
