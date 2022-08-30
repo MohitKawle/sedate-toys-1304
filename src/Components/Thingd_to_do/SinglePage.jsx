@@ -42,12 +42,7 @@ const SinglePage = () => {
   }, [id, placesData]);
 
   const handleCart = () => {
-    // let payload = {
-    //   id:currentData.id,
-    //   title:currentData.title,
-    //   price:currentData.price,
-    //   imageUrl:currentData.imageUrl,
-    // }
+    
     let payload = placesData.find((item) => item.id === Number(id));
     console.log(payload);
 
@@ -198,10 +193,8 @@ const SinglePage = () => {
               borderRadius: "22px",
               height: "50px",
               width: "250px",
-              // marginLeft: "30px",
               margin: "10px",
               backgroundColor: "white",
-              //   border: "none",
               cursor: "pointer",
               border: "1px solid black",
             }}
@@ -216,8 +209,6 @@ const SinglePage = () => {
               textAlign: "left",
               fontSize: "26px",
               fontWeight: "600",
-
-              // marginLeft: "15px",
             }}
           >
             Important information
@@ -254,11 +245,9 @@ const SinglePage = () => {
               borderRadius: "22px",
               height: "50px",
               width: "250px",
-              // marginLeft: "30px",
               border: "1px solid",
               marginTop: "25px",
               backgroundColor: "white",
-              //   border: "none",
               cursor: "pointer",
               margin: "10px",
             }}
@@ -281,7 +270,6 @@ const SinglePage = () => {
               textAlign: "left",
               fontSize: "26px",
               fontWeight: "600",
-              // marginLeft: "15px",
             }}
           >
             Travel safe during COVID-19
@@ -293,7 +281,6 @@ const SinglePage = () => {
               fontSize: "18px",
               fontWeight: "600",
               marginTop: "20px",
-              // marginLeft: "15px",
             }}
           >
             A note from BLive Electric Bike Tours – Countryside Escape to Varca
@@ -313,7 +300,6 @@ const SinglePage = () => {
               fontSize: "18px",
               fontWeight: "600",
               marginTop: "20px",
-              // marginLeft: "15px",
             }}
           >
             What you can expect during your visit
@@ -328,10 +314,8 @@ const SinglePage = () => {
               borderRadius: "22px",
               height: "50px",
               width: "250px",
-              // marginLeft: "30px",
               marginTop: "25px",
               backgroundColor: "white",
-              //   border: "none",
               cursor: "pointer",
               border: "1px solid",
               margin: "10px",
