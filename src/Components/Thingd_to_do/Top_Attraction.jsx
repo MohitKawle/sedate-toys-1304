@@ -185,8 +185,7 @@ const TopAttraction = () => {
             lineHeight: "50px",
             marginTop: "50px",
             color: "black",
-          }}
-        >
+          }}>
           Top Attractions in pune
         </p>{" "}
       </Center>
