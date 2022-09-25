@@ -576,7 +576,12 @@
       "price": "2760"
     }
   ],
-
-  "basket": []
-
+  "basket": [
+    {
+      "id": 3,
+      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/80/20/35/caption.jpg?w=300&h=300&s=1",
+      "title": "Pune to Lonavala Monsoon Drive in Private Vehicle",
+      "price": "2250"
+    }
+  ]
 }
