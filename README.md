@@ -2,18 +2,20 @@
 
 #### Tripadvisor, Inc. is an American online travel company that offers online hotel reservations and bookings for transportation, lodging, travel experiences, and restaurants.
 
-- Deployment:
+- Deployment: https://tripadvisor-mu.vercel.app/
 - Original Website: https://www.tripadvisor.in/
 
 ## About this project
 
 #### This project is created in a week by a team of five members -
+- Mohit Kawle  <a href="https://www.linkedin.com/in/mohit-kawle-529b661a3/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Mohit Kawle" height="10" width="20" /></a>
+- Shaik Shakeer  <a href="https://www.linkedin.com/in/shaik-shakeer-aa8965236/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Shaik Shakeer" height="10" width="20" /></a>
+- Somyakant Mohapatra <a href="https://linkedin.com/in/somyakant-mohapatra/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="somyakant mohapatra" height="10" width="20" /></a>
+- Pragati Tripathi  <a href="https://www.linkedin.com/in/pragati-tripathi05/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Pragati Tripathi" height="10" width="20" /></a>
+- Aditya Sudhakar Muthal  <a href="https://www.linkedin.com/in/aditya-muthal-41954a1a1/
+" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Aditya Sudhakar Muthal " height="10" width="20" /></a>
 
-    - Mohit Kawle [fp01_138]
-    - Shaik Shakeer [fw14_165]
-    - Somyakant Mohapatra [fw17_0599]
-    - Pragati Tripathi [fw17_0323]
-    - Aditya Sudhakar Muthal [fw17_0265]
+
 
 ## Tech Stack
 

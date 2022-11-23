@@ -78,7 +78,7 @@ export const removeFromBasketFailure = () => {
 export const getHotelList = (dispatch) => {
   dispatch(hotelListRequest());
   return axios
-    .get("http://localhost:8080/hotels")
+    .get("https://tripadvisorbackend.herokuapp.com/hotels")
     .then((res) => {
       dispatch(hotelListSuccess(res.data));
     })
@@ -100,7 +100,7 @@ export const placesFailure = () => {
 export const placesdata = (payload) => (dispatch) => {
   dispatch(placesRequest());
   axios
-    .get("http://localhost:8080/items", payload)
+    .get("https://tripadvisorbackend.herokuapp.com/items", payload)
     .then((r) => {
       dispatch(placesSuccess(r.data));
     })
@@ -112,7 +112,7 @@ export const placesdata = (payload) => (dispatch) => {
 export const getRestuarantList = (dispatch) => {
   dispatch(restaurantListRequest());
   return axios
-    .get("http://localhost:8080/restaurants")
+    .get("https://tripadvisorbackend.herokuapp.com/restaurants")
     .then((res) => {
       dispatch(restaurantListSuccess(res.data));
     })
@@ -122,7 +122,7 @@ export const getRestuarantList = (dispatch) => {
 export const getSightList = (dispatch) => {
   dispatch(sightListRequest());
   return axios
-    .get("http://localhost:8080/sight")
+    .get("https://tripadvisorbackend.herokuapp.com/sight")
     .then((res) => {
       dispatch(sightListSuccess(res.data));
     })
@@ -132,7 +132,7 @@ export const getSightList = (dispatch) => {
 export const addToBasket = () => (dispatch) => {
   dispatch(addToBasketRequest());
   return axios
-    .get("http://localhost:8080/basket")
+    .get("https://tripadvisorbackend.herokuapp.com/basket")
     .then((res) => {
       console.log("res:", res.data);
       return dispatch(addToBasketSuccess(res.data));
@@ -163,7 +163,7 @@ export const addToCartFailure = () => {
 export const removeFromBasket = (id) => (dispatch) => {
   dispatch(removeFromBasketRequest());
   return axios
-    .delete(`http://localhost:8080/basket/${id}`)
+    .delete(`https://tripadvisorbackend.herokuapp.com/basket/${id}`)
     .then((res) => {
       return dispatch(removeFromBasketSuccess());
     })
