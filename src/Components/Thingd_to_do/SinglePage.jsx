@@ -48,7 +48,7 @@ const SinglePage = () => {
 
     dispatch(addToCartRequest());
     axios
-      .post("http://localhost:8080/basket", payload)
+      .post("https://tripadvisorbackend.herokuapp.com/basket", payload)
       .then(() => dispatch(addToCartSuccess()))
       .catch((e) => dispatch(addToCartFailure(e)));
     alert("Item added to Basket");
