@@ -78,7 +78,7 @@ export const removeFromBasketFailure = () => {
 export const getHotelList = (dispatch) => {
   dispatch(hotelListRequest());
   return axios
-    .get("https://tripadvisorbackend.herokuapp.com/hotels")
+    .get("https://tripadvisorbackend.onrender.com/hotels")
     .then((res) => {
       dispatch(hotelListSuccess(res.data));
     })
@@ -100,7 +100,7 @@ export const placesFailure = () => {
 export const placesdata = (payload) => (dispatch) => {
   dispatch(placesRequest());
   axios
-    .get("https://tripadvisorbackend.herokuapp.com/items", payload)
+    .get("https://tripadvisorbackend.onrender.com/items", payload)
     .then((r) => {
       dispatch(placesSuccess(r.data));
     })
@@ -112,7 +112,7 @@ export const placesdata = (payload) => (dispatch) => {
 export const getRestuarantList = (dispatch) => {
   dispatch(restaurantListRequest());
   return axios
-    .get("https://tripadvisorbackend.herokuapp.com/restaurants")
+    .get("https://tripadvisorbackend.onrender.com/restaurants")
     .then((res) => {
       dispatch(restaurantListSuccess(res.data));
     })
@@ -122,7 +122,7 @@ export const getRestuarantList = (dispatch) => {
 export const getSightList = (dispatch) => {
   dispatch(sightListRequest());
   return axios
-    .get("https://tripadvisorbackend.herokuapp.com/sight")
+    .get("https://tripadvisorbackend.onrender.com/sight")
     .then((res) => {
       dispatch(sightListSuccess(res.data));
     })
@@ -132,7 +132,7 @@ export const getSightList = (dispatch) => {
 export const addToBasket = () => (dispatch) => {
   dispatch(addToBasketRequest());
   return axios
-    .get("https://tripadvisorbackend.herokuapp.com/basket")
+    .get("https://tripadvisorbackend.onrender.com/basket")
     .then((res) => {
       console.log("res:", res.data);
       return dispatch(addToBasketSuccess(res.data));
@@ -163,7 +163,7 @@ export const addToCartFailure = () => {
 export const removeFromBasket = (id) => (dispatch) => {
   dispatch(removeFromBasketRequest());
   return axios
-    .delete(`https://tripadvisorbackend.herokuapp.com/basket/${id}`)
+    .delete(`https://tripadvisorbackend.onrender.com/basket/${id}`)
     .then((res) => {
       return dispatch(removeFromBasketSuccess());
     })
